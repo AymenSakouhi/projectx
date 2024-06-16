@@ -6,10 +6,10 @@ export default function notFound() {
       <h1 className="text-[25px]">PAGE NOT FOUND</h1>
       <h2 className="text-[25px]">404</h2>
       <p>
-        back to{" "}
+        back to
         <Link href="/" className="text-blue text-blue-800 underline">
           home
-        </Link>{" "}
+        </Link>
         page ?
       </p>
     </div>
