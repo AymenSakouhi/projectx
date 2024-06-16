@@ -9,14 +9,19 @@ export default {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
         openSans: ["OpenSans"],
       },
-      screen: {
-        xs: "340px",
-        sm: "540px",
-        m: "720px",
-        l: "960px",
-        xl: "1140px",
-        xxl: "1320px",
-        xxxl: "1500px",
+
+      screens: {
+        phone: "340px",
+        // => @media (min-width: 340px) { ... }
+
+        tablet: "640px",
+        // => @media (min-width: 640px) { ... }
+
+        laptop: "1024px",
+        // => @media (min-width: 1024px) { ... }
+
+        desktop: "1280px",
+        // => @media (min-width: 1280px) { ... }
       },
     },
   },
