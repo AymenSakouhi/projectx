@@ -8,6 +8,7 @@ export default {
       fontFamily: {
         sans: ["var(--font-geist-sans)", ...fontFamily.sans],
         openSans: ["OpenSans"],
+        Lato: ["Lato"],
       },
 
       screens: {
