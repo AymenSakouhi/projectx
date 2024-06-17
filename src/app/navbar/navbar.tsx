@@ -3,19 +3,44 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Logo from "public/logo_header.png";
 import Image from "next/image";
+import homeIcon from "public/icons8-home-120.png";
+import blogIcon from "public/icons8-blog-dotted-96.png";
+import pageIcon from "public/icons8-page-96.png";
+import shortIcon from "public/icons8-chemical-96.png";
+import contactIcon from "public/icons8-contact-us-96.png";
 
 type navType = {
   name: string;
   path: string;
-  icon: React.ReactNode;
+  icon?: any;
 };
 
 const navData: navType[] = [
-  { name: "Home", path: "/", icon: <></> },
-  { name: "Pages", path: "/pages", icon: <></> },
-  { name: "Blog", path: "/blog", icon: <></> },
-  { name: "Shortcode", path: "/shortcode", icon: <></> },
-  { name: "contact", path: "/contact", icon: <></> },
+  {
+    name: "Home",
+    path: "/",
+    icon: homeIcon,
+  },
+  {
+    name: "Pages",
+    path: "/pages",
+    icon: pageIcon,
+  },
+  {
+    name: "Blog",
+    path: "/blog",
+    icon: blogIcon,
+  },
+  {
+    name: "Shortcode",
+    path: "/shortcode",
+    icon: shortIcon,
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+    icon: contactIcon,
+  },
 ];
 
 export default function Navbar() {
@@ -39,26 +64,30 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="laptop:flex-row phone:flex-col laptop:h-[126px] phone:h-auto flex w-[100%] items-center justify-center bg-[#ffffff] text-center ">
-      <div className="laptop:w-[50%] phone:w-[100%] flex h-[100%] flex-col items-center justify-center text-center">
+    <div className="flex w-[100%] items-center justify-center bg-[#ffffff] text-center phone:h-auto phone:flex-col laptop:h-[126px] laptop:flex-row ">
+      <div className="flex h-[100%] flex-col items-center justify-center text-center phone:w-[100%] laptop:w-[50%]">
         <Image
-          className=" tablet:h-[100%]  tablet:w-[189px] h-[100%] w-[100px]"
+          className=" h-[100%]  w-[100px] tablet:h-[100%] tablet:w-[189px]"
           src={Logo}
           alt=""
         />
       </div>
-      <div className="laptop:w-[50%] phone:w-[100%] laptop:justify-start phone:justify-center flex h-[100%] flex-row items-center text-center">
+      <div className="flex h-[100%] flex-row items-center text-center phone:w-[100%] phone:justify-center laptop:w-[50%] laptop:justify-start">
         {isLaptop ? (
           navData.map((nav: navType, index) => {
             return (
               <Link
                 key={index}
                 href={nav.path}
-                className=" tablet:text-[14px] desktop:text-[18px] phone:text-[13px] laptop:text-[15px] desktop:p-[10px] desktop:pb-[25px] desktop:pt-[30px] laptop:p-[7px] laptop:pb-[20px] laptop:pt-[25px]  flex h-[100%] flex-col  items-center justify-center  text-center font-light  leading-[24px] text-[#665bdb]"
+                className=" flex h-[100%] flex-col items-center justify-center text-center font-light leading-[24px] text-[#665bdb] phone:text-[13px]  tablet:text-[14px] laptop:p-[7px] laptop:pb-[20px]  laptop:pt-[25px] laptop:text-[15px]  desktop:p-[10px] desktop:pb-[25px]  desktop:pt-[30px] desktop:text-[18px]"
               >
-                <p className="laptop:m-[19px] phone:m-[12px] mb-[15px] mt-[0px] ">
-                  {nav.icon}
-                  {nav.name}
+                <p className="mb-[15px] mt-[0px] flex flex-col gap-[5px] phone:m-[12px] laptop:m-[19px] ">
+                  <Image
+                    src={nav.icon}
+                    alt="navIcon"
+                    style={{ height: "100%" }}
+                  />
+                  {nav.name}00
                 </p>
               </Link>
             );
@@ -79,10 +108,11 @@ export default function Navbar() {
                   <Link
                     key={index}
                     href={nav.path}
-                    className=" tablet:text-[14px] desktop:text-[18px] phone:text-[13px] laptop:text-[15px] desktop:p-[10px] desktop:pb-[25px] desktop:pt-[30px] laptop:p-[7px] laptop:pb-[20px] laptop:pt-[25px]  flex h-[100%] flex-col  items-center justify-center  text-center font-light  leading-[24px] text-[#665bdb]"
+                    className=" flex h-[100%] flex-col items-center justify-center text-center font-light leading-[24px] text-[#665bdb] phone:text-[13px]  tablet:text-[14px] laptop:p-[7px] laptop:pb-[20px]  laptop:pt-[25px] laptop:text-[15px]  desktop:p-[10px] desktop:pb-[25px]  desktop:pt-[30px] desktop:text-[18px]"
                   >
-                    <p className="laptop:m-[19px] phone:m-[12px] mb-[15px] mt-[0px] ">
-                      {nav.icon}
+                    <p className="mb-[15px] mt-[0px] phone:m-[12px] laptop:m-[19px] ">
+                      <Image src={nav.icon} alt="navIcon" />
+
                       {nav.name}
                     </p>
                   </Link>
