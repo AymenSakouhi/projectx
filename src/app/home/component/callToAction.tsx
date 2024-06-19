@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function CallToAction() {
   return (
-    <div className="relative flex h-[167px] w-full items-center justify-center overflow-hidden bg-cover bg-center text-center phone:flex-col laptop:flex-row">
+    <div className="relative flex h-[167px] w-full items-center justify-center bg-cover bg-center text-center phone:flex-col laptop:flex-row">
       <Image
         src={bgCallTAction}
         alt="Background Image"

@@ -98,21 +98,21 @@ export default function LandingPage() {
             setTransformImg(0), setTimerInterval(0);
           }}
           style={{ bottom: transformImg === 0 ? "15px" : "" }}
-          className="relative h-[12px] w-[40px] cursor-pointer border-[3px] border-[#fe6501] bg-transparent hover:border-[#665bdb]"
+          className="relative h-[12px] w-[40px] cursor-pointer border-[2px] border-[#fe6501] bg-transparent hover:border-[#665bdb]"
         ></div>
         <div
           onClick={() => {
             setTransformImg(1), setTimerInterval(0);
           }}
           style={{ bottom: transformImg === 1 ? "15px" : "" }}
-          className="relative h-[12px] w-[40px] cursor-pointer border-[3px] border-[#fe6501] bg-transparent hover:border-[#665bdb]"
+          className="relative h-[12px] w-[40px] cursor-pointer border-[2px] border-[#fe6501] bg-transparent hover:border-[#665bdb]"
         ></div>
         <div
           onClick={() => {
             setTransformImg(2), setTimerInterval(0);
           }}
           style={{ bottom: transformImg === 2 ? "15px" : "" }}
-          className="relative h-[12px] w-[40px] cursor-pointer border-[3px] border-[#fe6501] bg-transparent hover:border-[#665bdb]"
+          className="relative h-[12px] w-[40px] cursor-pointer border-[2px] border-[#fe6501] bg-transparent hover:border-[#665bdb]"
         ></div>
       </div>
     </div>
