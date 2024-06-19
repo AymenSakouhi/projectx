@@ -4,36 +4,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.fixed-nav {
+.scrollingNavFixed {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 20;
-  height: 126px;
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 0.5s ease-in-out;
+  z-index: 100;
+  transition: all;
+  transition-duration: 500;
+  transition-timing-function: ease-in-out;
+  animation-name: scrollingNav;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: inherit;
 }
 
-.hidden-nav {
-  transform: translateY(-100);
-  transition: all 0.5s ease-in-out;
-  animation: navAni 500ms ease-in-out forwards;
-}
-
-.visible-nav {
-  opacity: 1;
-  transform: translateY(0);
-  transition: all 500ms ease-in-out;
-}
-
-@keyframes navAni {
+@keyframes scrollingNav {
   0% {
-    opacity: 0%;
-    transform: translateY(-100);
+    opacity: 0;
   }
   100% {
     opacity: 100%;
-    transform: translateY(0);
   }
 }
