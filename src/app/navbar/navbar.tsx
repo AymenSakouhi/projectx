@@ -48,7 +48,7 @@ const navData: navType[] = [
 ];
 
 export default function Navbar() {
-  const [isLaptop, setIsLaptop] = useState(1024);
+  const [isLaptop, setIsLaptop] = useState(false);
   const [menuheight, setMenuheight] = useState(40);
 
   useEffect(() => {
@@ -80,8 +80,8 @@ export default function Navbar() {
         </Link>
       </div>
       <div className="flex h-[100%] flex-row items-center text-center phone:w-[100%] phone:justify-center laptop:w-[50%] laptop:justify-start">
-        {isLaptop ? (
-          navData.map((nav: navType, index) => {
+        <div className="phone:hidden laptop:flex">
+          {navData.map((nav: navType, index) => {
             return (
               <Link
                 key={index}
@@ -99,8 +99,9 @@ export default function Navbar() {
                 </p>
               </Link>
             );
-          })
-        ) : (
+          })}
+        </div>
+        <div className="phone:w-[100%] laptop:hidden">
           <div
             className="mb-[20px] mt-[20px] h-[42px] w-[90%] overflow-hidden border border-slate-300 "
             style={{ height: `${menuheight}px` }}
@@ -131,7 +132,7 @@ export default function Navbar() {
               })}
             </div>
           </div>
-        )}
+        </div>
       </div>
     </div>
   );

@@ -92,7 +92,7 @@ export default function LandingPage() {
         })}
       </div>
 
-      <div className=" absolute bottom-[15px] flex w-[100%] flex-row items-center justify-center gap-[10px] text-center">
+      <div className=" absolute bottom-[25px] flex w-[100%] flex-row items-center justify-center gap-[10px] text-center">
         <div
           onClick={() => {
             setTransformImg(0), setTimerInterval(0);

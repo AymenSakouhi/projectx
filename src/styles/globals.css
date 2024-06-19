@@ -10,4 +10,5 @@
   background-position: center center;
   position: absolute;
   z-index: -1;
+  background-attachment: fixed;
 }

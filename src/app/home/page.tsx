@@ -1,10 +1,12 @@
-import CallToAction from "./component/callToAction";
-import LandingPage from "./component/landingPage";
+import CallToAction from "~/app/home/component/callToAction";
+import ContentTemplate from "~/app/home/component/contentTemplate";
+import LandingPage from "~/app/home/component/landingPage";
 export default function HomePage() {
   return (
     <>
       <LandingPage />
       <CallToAction />
+      <ContentTemplate />
     </>
   );
 }
