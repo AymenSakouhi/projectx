@@ -26,3 +26,30 @@
     opacity: 100%;
   }
 }
+
+/* over view elements */
+.overViewBtn {
+  transition: all 0.3s ease;
+  border-bottom: rgba(212, 212, 212, 0.589) solid 2px;
+}
+.overViewBtn:hover {
+  background-color: #fe6501;
+  color: white;
+  border-bottom: none;
+}
+.overViewBtn::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fe6501;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.overViewBtn:hover::after {
+  opacity: 1;
+}
