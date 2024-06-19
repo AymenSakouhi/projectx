@@ -101,7 +101,7 @@ export default function Navbar() {
             );
           })}
         </div>
-        <div className="phone:w-[100%] laptop:hidden">
+        <div className="flex flex-col items-center justify-center text-center phone:w-[100%] laptop:hidden">
           <div
             className="mb-[20px] mt-[20px] h-[42px] w-[90%] overflow-hidden border border-slate-300 "
             style={{ height: `${menuheight}px` }}
