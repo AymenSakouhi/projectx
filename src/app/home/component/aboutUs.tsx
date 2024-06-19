@@ -42,7 +42,7 @@ const contentTempData: contentTempTypes[] = [
   },
 ];
 
-export default function ContentTemplate() {
+export default function AboutUs() {
   return (
     <div className="flex h-[auto] min-h-[684px] flex-col items-center justify-center pb-[50px] pt-[60px] text-center">
       <div>
