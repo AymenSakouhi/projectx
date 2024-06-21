@@ -6,6 +6,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import clockIcon from "public/overView_Icons/overview_Clock_Icon.png";
 import connectIcon from "public/overView_Icons/overview_Connect_Icon.png";
+import pcIcon from "public/missions_Icons/missions_Com_Icon.png";
+import heartIcon from "public/missions_Icons/missions_Heart_Icon.png";
+import cheIcon from "public/missions_Icons/missions_Che_Icon.png";
 
 export default function OverViewPage() {
   return (
@@ -23,7 +26,7 @@ export default function OverViewPage() {
           </button>
         </div>
         <div>
-          <OverViewElements />
+          <MissionsElements />
         </div>
       </div>
       <div className="flex h-[80%] w-[509px] flex-col items-center justify-start  text-center">
@@ -105,8 +108,8 @@ const MissionsElements = () => {
   return (
     <div className="flex w-[100%] flex-col text-start">
       <div className="mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
-        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%] bg-[#fe6501] text-center">
-          <Image src={clockIcon} alt="" />
+        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%]  text-center">
+          <Image src={pcIcon} alt="" />
         </div>
         <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
           <h1 className=" font-lato text-[24px] font-normal leading-[29px] text-[rgb(86,80,159)] ">
@@ -119,8 +122,8 @@ const MissionsElements = () => {
         </div>
       </div>
       <div className=" mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
-        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%] bg-[#fe6501] text-center">
-          <Image src={connectIcon} alt="" />
+        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%]  text-center">
+          <Image src={heartIcon} alt="" />
         </div>
         <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
           <h1 className=" font-lato text-[24px] font-normal leading-[29px] text-[rgb(86,80,159)] ">
@@ -133,8 +136,8 @@ const MissionsElements = () => {
         </div>
       </div>
       <div className=" mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
-        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%] bg-[#fe6501] text-center">
-          <Image src={connectIcon} alt="" />
+        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%]  text-center">
+          <Image src={cheIcon} alt="" />
         </div>
         <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
           <h1 className=" font-lato text-[24px] font-normal leading-[29px] text-[rgb(86,80,159)] ">
