@@ -22,7 +22,9 @@ export default function OverViewPage() {
             Our Mission
           </button>
         </div>
-        <div>here comes the overview and mission page</div>
+        <div>
+          <OverViewElements />
+        </div>
       </div>
       <div className="flex h-[80%] w-[509px] flex-col items-center justify-start  text-center">
         <div className=" relative flex h-[373px] w-[100%] flex-row justify-between">
@@ -58,27 +60,90 @@ export default function OverViewPage() {
   );
 }
 
-const missionBody = () => {
+const OverViewElements = () => {
   return (
-    <div>
-      <h1 className="text-[rgb(86, 80, 159)] mb-[30px] font-Lato text-[30px] font-normal leading-[36px]">
+    <div className="flex w-[100%] flex-col text-start">
+      <h1 className="mb-[30px] font-Lato text-[30px] font-normal leading-[36px] text-[rgb(86,80,159)]">
         Our philosophy is learning through play as we offer a stimulating
         environment for children.
       </h1>
       <div>
-        <div className="flex h-[97px] w-[509px] flex-row items-center justify-between text-center">
-          <div>
+        <div className="mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
+          <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%] bg-[#fe6501] text-center">
             <Image src={clockIcon} alt="" />
           </div>
-          <div>
-            <h1 className="font-lato text-[24px] font-normal leading-[29px] ">
+          <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
+            <h1 className=" font-lato text-[24px] font-normal leading-[29px] text-[rgb(86,80,159)] ">
               Full Day Sessions
             </h1>
-            <p>
+            <p className=" w-[90%] font-openSans text-[16px] font-normal leading-[24px] text-[rgb(112,112,112)]">
               Pulvinar est metro ligula blandit maecenas retrum gravida cuprum.
               Maecenas node estibulum.
             </p>
           </div>
+        </div>
+        <div className=" mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
+          <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%] bg-[#fe6501] text-center">
+            <Image src={connectIcon} alt="" />
+          </div>
+          <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
+            <h1 className=" font-lato text-[24px] font-normal leading-[29px] text-[rgb(86,80,159)] ">
+              Full Day Sessions
+            </h1>
+            <p className=" w-[90%] font-openSans text-[16px] font-normal leading-[24px] text-[rgb(112,112,112)]">
+              Pulvinar est metro ligula blandit maecenas retrum gravida cuprum.
+              Maecenas node estibulum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const MissionsElements = () => {
+  return (
+    <div className="flex w-[100%] flex-col text-start">
+      <div className="mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
+        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%] bg-[#fe6501] text-center">
+          <Image src={clockIcon} alt="" />
+        </div>
+        <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
+          <h1 className=" font-lato text-[24px] font-normal leading-[29px] text-[rgb(86,80,159)] ">
+            Online Access
+          </h1>
+          <p className=" w-[90%] font-openSans text-[16px] font-normal leading-[24px] text-[rgb(112,112,112)]">
+            Pulvinar est metro ligula blandit maecenas retrum gravida cuprum.
+            Maecenas node estibulum.
+          </p>
+        </div>
+      </div>
+      <div className=" mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
+        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%] bg-[#fe6501] text-center">
+          <Image src={connectIcon} alt="" />
+        </div>
+        <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
+          <h1 className=" font-lato text-[24px] font-normal leading-[29px] text-[rgb(86,80,159)] ">
+            Maecenas Node
+          </h1>
+          <p className=" w-[90%] font-openSans text-[16px] font-normal leading-[24px] text-[rgb(112,112,112)]">
+            Pulvinar est metro ligula blandit maecenas retrum gravida cuprum.
+            Maecenas node estibulum.
+          </p>
+        </div>
+      </div>
+      <div className=" mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
+        <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%] bg-[#fe6501] text-center">
+          <Image src={connectIcon} alt="" />
+        </div>
+        <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
+          <h1 className=" font-lato text-[24px] font-normal leading-[29px] text-[rgb(86,80,159)] ">
+            Praesent Morbi
+          </h1>
+          <p className=" w-[90%] font-openSans text-[16px] font-normal leading-[24px] text-[rgb(112,112,112)]">
+            Pulvinar est metro ligula blandit maecenas retrum gravida cuprum.
+            Maecenas node estibulum.
+          </p>
         </div>
       </div>
     </div>
