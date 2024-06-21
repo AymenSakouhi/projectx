@@ -4,6 +4,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import clockIcon from "public/overView_Icons/overview_Clock_Icon.png";
+import connectIcon from "public/overView_Icons/overview_Connect_Icon.png";
 
 export default function OverViewPage() {
   return (
@@ -20,7 +22,7 @@ export default function OverViewPage() {
             Our Mission
           </button>
         </div>
-        <div>here comes the overview and mission page </div>
+        <div>here comes the overview and mission page</div>
       </div>
       <div className="flex h-[80%] w-[509px] flex-col items-center justify-start  text-center">
         <div className=" relative flex h-[373px] w-[100%] flex-row justify-between">
@@ -55,3 +57,30 @@ export default function OverViewPage() {
     </div>
   );
 }
+
+const missionBody = () => {
+  return (
+    <div>
+      <h1 className="text-[rgb(86, 80, 159)] mb-[30px] font-Lato text-[30px] font-normal leading-[36px]">
+        Our philosophy is learning through play as we offer a stimulating
+        environment for children.
+      </h1>
+      <div>
+        <div className="flex h-[97px] w-[509px] flex-row items-center justify-between text-center">
+          <div>
+            <Image src={clockIcon} alt="" />
+          </div>
+          <div>
+            <h1 className="font-lato text-[24px] font-normal leading-[29px] ">
+              Full Day Sessions
+            </h1>
+            <p>
+              Pulvinar est metro ligula blandit maecenas retrum gravida cuprum.
+              Maecenas node estibulum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
