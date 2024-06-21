@@ -17,7 +17,7 @@ export default function OverViewPage() {
 
   return (
     <div className="flex h-[564px] flex-row items-center justify-center  bg-[#f5f5f5f5] text-center">
-      <div className="flex h-[80%] w-[40%] flex-col items-center justify-start gap-[61px] text-center">
+      <div className="flex h-[80%] w-[35%] flex-col items-center justify-start gap-[30px] text-center">
         <div className="flex   w-[100%] flex-row items-center justify-start gap-[19px] text-center">
           <button
             onClick={() => setOverViewEl(true)}
@@ -33,7 +33,7 @@ export default function OverViewPage() {
             Our Mission
           </button>
         </div>
-        <div className="flex flex-row items-center justify-center">
+        <div className="flex flex-row items-center justify-center overflow-hidden">
           <div className={`${overViewEl ? "" : "hidden"}`}>
             <OverViewElements />
           </div>
@@ -44,7 +44,7 @@ export default function OverViewPage() {
       </div>
       <div className="flex h-[80%] w-[509px] flex-col items-center justify-start  text-center">
         <div className=" relative flex h-[373px] w-[100%] flex-row justify-between">
-          <div className=" absolute top-[50%] flex w-[100%] flex-row items-center justify-between text-center ">
+          <div className=" absolute top-[50%] flex w-[100%] translate-y-[-50%]  flex-row items-center justify-between text-center ">
             <div className=" item-center flex h-[40px] cursor-pointer justify-center  bg-[#fe6501] p-[6px] text-center text-white hover:bg-[#665bdb]">
               <FontAwesomeIcon
                 icon={faChevronLeft}
@@ -79,7 +79,7 @@ export default function OverViewPage() {
 const OverViewElements = () => {
   return (
     <div className={`flex h-[100%] w-[100%] flex-col text-start`}>
-      <h1 className="mb-[30px] font-Lato text-[30px] font-normal leading-[36px] text-[rgb(86,80,159)]">
+      <h1 className="mb-[30px] w-[90%] font-Lato text-[30px] font-normal leading-[36px] text-[rgb(86,80,159)]">
         Our philosophy is learning through play as we offer a stimulating
         environment for children.
       </h1>
@@ -119,8 +119,8 @@ const OverViewElements = () => {
 
 const MissionsElements = () => {
   return (
-    <div className="flex h-[100%] w-[100%] flex-col text-start">
-      <div className="mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
+    <div className="flex h-[100%] w-[100%] flex-col justify-center gap-[30px] text-start">
+      <div className=" flex h-[97px] flex-row items-center gap-[26px] text-center">
         <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%]  text-center">
           <Image src={pcIcon} alt="" />
         </div>
@@ -134,7 +134,7 @@ const MissionsElements = () => {
           </p>
         </div>
       </div>
-      <div className=" mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
+      <div className="  flex h-[97px] flex-row items-center gap-[26px] text-center">
         <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%]  text-center">
           <Image src={heartIcon} alt="" />
         </div>
@@ -148,7 +148,7 @@ const MissionsElements = () => {
           </p>
         </div>
       </div>
-      <div className=" mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
+      <div className="  flex h-[97px] flex-row items-center gap-[26px] text-center">
         <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%]  text-center">
           <Image src={cheIcon} alt="" />
         </div>
