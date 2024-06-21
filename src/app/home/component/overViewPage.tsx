@@ -1,3 +1,4 @@
+"use client";
 import {
   faChevronLeft,
   faChevronRight,
@@ -9,24 +10,36 @@ import connectIcon from "public/overView_Icons/overview_Connect_Icon.png";
 import pcIcon from "public/missions_Icons/missions_Com_Icon.png";
 import heartIcon from "public/missions_Icons/missions_Heart_Icon.png";
 import cheIcon from "public/missions_Icons/missions_Che_Icon.png";
+import { useState } from "react";
 
 export default function OverViewPage() {
+  const [overViewEl, setOverViewEl] = useState(true);
+
   return (
     <div className="flex h-[564px] flex-row items-center justify-center  bg-[#f5f5f5f5] text-center">
       <div className="flex h-[80%] w-[40%] flex-col items-center justify-start gap-[61px] text-center">
         <div className="flex   w-[100%] flex-row items-center justify-start gap-[19px] text-center">
           <button
+            onClick={() => setOverViewEl(true)}
             type="button"
-            className="overViewBtn relative h-[50px] w-[140px]  p-[15px] pb-[12px] pt-[12px] font-openSans text-[18px] font-normal leading-[27px] text-[rgb(158,158,158)]"
+            className={`${overViewEl ? "selectedOverView" : ""} overViewBtn relative h-[50px] w-[140px]  p-[15px] pb-[12px] pt-[12px] font-openSans text-[18px] font-normal leading-[27px] text-[rgb(158,158,158)]`}
           >
             Overview
           </button>
-          <button className="overViewBtn relative h-[50px] w-[140px] p-[15px] pb-[12px] pt-[12px] font-openSans text-[18px] font-normal leading-[27px] text-[rgb(158,158,158)]">
+          <button
+            onClick={() => setOverViewEl(false)}
+            className={`${!overViewEl ? "selectedOverView" : ""} overViewBtn relative h-[50px] w-[140px]  p-[15px] pb-[12px] pt-[12px] font-openSans text-[18px] font-normal leading-[27px] text-[rgb(158,158,158)]`}
+          >
             Our Mission
           </button>
         </div>
-        <div>
-          <MissionsElements />
+        <div className="flex flex-row items-center justify-center">
+          <div className={`${overViewEl ? "" : "hidden"}`}>
+            <OverViewElements />
+          </div>
+          <div className={`${!overViewEl ? "" : "hidden"}`}>
+            <MissionsElements />
+          </div>
         </div>
       </div>
       <div className="flex h-[80%] w-[509px] flex-col items-center justify-start  text-center">
@@ -65,7 +78,7 @@ export default function OverViewPage() {
 
 const OverViewElements = () => {
   return (
-    <div className="flex w-[100%] flex-col text-start">
+    <div className={`flex h-[100%] w-[100%] flex-col text-start`}>
       <h1 className="mb-[30px] font-Lato text-[30px] font-normal leading-[36px] text-[rgb(86,80,159)]">
         Our philosophy is learning through play as we offer a stimulating
         environment for children.
@@ -106,7 +119,7 @@ const OverViewElements = () => {
 
 const MissionsElements = () => {
   return (
-    <div className="flex w-[100%] flex-col text-start">
+    <div className="flex h-[100%] w-[100%] flex-col text-start">
       <div className="mb-[30px] flex h-[97px] flex-row items-center gap-[26px] text-center">
         <div className="flex h-[80px] w-[80px] flex-col items-center justify-center rounded-[100%]  text-center">
           <Image src={pcIcon} alt="" />

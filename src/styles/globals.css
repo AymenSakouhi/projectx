@@ -53,3 +53,21 @@
 .overViewBtn:hover::after {
   opacity: 1;
 }
+
+.selectedOverView {
+  background-color: #fe6501;
+  color: white;
+  border-bottom: none;
+}
+
+.selectedOverView::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  opacity: 1;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fe6501;
+}
