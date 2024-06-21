@@ -142,13 +142,13 @@ export default function OverViewPage() {
         </div>
         <div className="mt-[4px] flex h-[2px] w-[100%] flex-row items-center justify-center text-center transition-all duration-500 phone:gap-[5px] laptop:gap-[10px]">
           <div
-            className={`phone:w-[32%]laptop:w-[162px] h-[2px] rounded-[25px]  ${transformImg === 0 && "bg-[#fe6501]"}`}
+            className={`h-[2px] rounded-[25px] phone:w-[32%] laptop:w-[162px]  ${transformImg === 0 && "bg-[#fe6501]"}`}
           ></div>
           <div
             className={`h-[2px]  rounded-[25px] phone:w-[32%] laptop:w-[162px]  ${transformImg === 1 && "bg-[#fe6501]"}`}
           ></div>
           <div
-            className={`phone:w-[32%]laptop:w-[162px]  h-[2px] rounded-[25px]  ${transformImg === 2 && "bg-[#fe6501]"}`}
+            className={`h-[2px] rounded-[25px] phone:w-[32%] laptop:w-[162px]  ${transformImg === 2 && "bg-[#fe6501]"}`}
           ></div>
         </div>
       </div>
