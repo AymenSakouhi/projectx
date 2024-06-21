@@ -6,24 +6,28 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
 
+type dataImgTypes = {
+  id: number;
+  img: string;
+};
+const imgData: dataImgTypes[] = [
+  {
+    id: 1,
+    img: `https://via.placeholder.com/1980x1080`,
+  },
+  {
+    id: 2,
+    img: `https://via.placeholder.com/1980x1080`,
+  },
+  {
+    id: 3,
+    img: `https://via.placeholder.com/1980x1080`,
+  },
+];
+
 export default function LandingPage() {
   const [transformImg, setTransformImg] = useState(0);
   const [timerInterval, setTimerInterval] = useState(0);
-
-  const imgData = [
-    {
-      id: 1,
-      img: `https://via.placeholder.com/1980x1080`,
-    },
-    {
-      id: 2,
-      img: `https://via.placeholder.com/1980x1080`,
-    },
-    {
-      id: 3,
-      img: `https://via.placeholder.com/1980x1080`,
-    },
-  ];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
