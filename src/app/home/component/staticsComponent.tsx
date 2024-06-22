@@ -49,7 +49,7 @@ const informationData: informationDataType[] = [
 
 export default function StaticsComponent() {
   return (
-    <div className=" relative flex h-auto min-h-[357px] flex-col items-center justify-center pb-[80px] pt-[80px] text-center">
+    <div className=" relative flex h-auto  flex-col items-center justify-center  pb-[80px] pt-[80px] text-center">
       <Image
         className="z-[-1] m-0 h-[100%] w-[100%] p-0 "
         src={staticsBgImg}
@@ -58,7 +58,7 @@ export default function StaticsComponent() {
         objectFit="cover"
       />
 
-      <div className="flex h-[357px] w-[75%] flex-col items-center justify-center  text-center">
+      <div className="flex h-[357px] w-[75%] flex-col items-center justify-center gap-[30px]  text-center">
         <div className="  flex  w-[80%] flex-col flex-wrap  items-center justify-start gap-[1rem] overflow-hidden  text-center">
           {informationData.map((data: informationDataType) => {
             return (
@@ -81,13 +81,13 @@ export default function StaticsComponent() {
             );
           })}
         </div>
-        <div className="">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div className=" flex h-[auto] w-[auto] flex-row items-center justify-center text-center">
+          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
+          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
+          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
+          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
+          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
+          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
         </div>
       </div>
     </div>
