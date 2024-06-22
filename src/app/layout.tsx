@@ -7,6 +7,7 @@ import { GeistSans } from "geist/font/sans";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import Navbar from "./navbar/navbar";
+import ScrollToTopBtn from "./scrollToTopBtn";
 
 export const metadata = {
   title: "Create T3 App",
@@ -23,6 +24,7 @@ export default function RootLayout({
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
         <Navbar />
+        <ScrollToTopBtn />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
