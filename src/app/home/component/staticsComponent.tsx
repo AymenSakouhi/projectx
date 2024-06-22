@@ -49,27 +49,46 @@ const informationData: informationDataType[] = [
 
 export default function StaticsComponent() {
   return (
-    <div className=" relative flex h-[357px] flex-col items-center justify-center pb-[80px] pt-[80px] text-center">
+    <div className=" relative flex h-auto min-h-[357px] flex-col items-center justify-center pb-[80px] pt-[80px] text-center">
       <Image
-        className="m-0 h-[100%] w-[100%] p-0 "
+        className="z-[-1] m-0 h-[100%] w-[100%] p-0 "
         src={staticsBgImg}
         alt=""
         layout="fill"
         objectFit="cover"
       />
 
-      <div className="w-[ flex flex-row items-center justify-center text-center">
-        {informationData.map((data: informationDataType) => {
-          return <div key={data.id}></div>;
-        })}
-      </div>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div className="flex h-[357px] w-[75%] flex-col items-center justify-center  text-center">
+        <div className="  flex  w-[80%] flex-col flex-wrap  items-center justify-start gap-[1rem] overflow-hidden  text-center">
+          {informationData.map((data: informationDataType) => {
+            return (
+              <div
+                key={data.id}
+                className=" mr-[30px] flex w-[240px] flex-col items-center justify-center text-center"
+              >
+                <div className=" mb-[20px] ml-[30px] mr-[30px] flex h-[176px] w-[176px] flex-col items-center justify-center rounded-[50%] border-[2px] border-white text-center ">
+                  <p className=" font-openSans text-[50px] font-light leading-[75px] text-white ">
+                    {data.id === 3 ? data.number + " %" : data.number}
+                  </p>
+                </div>
+                <h1 className=" color-white mb-[20px] w-[100%] font-Lato text-[24px] font-normal leading-[29px] text-white">
+                  {data.title}
+                </h1>
+                <p className=" w-[100%] font-openSans text-[16px] font-normal leading-[24px] text-white">
+                  {data.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
     </div>
   );
