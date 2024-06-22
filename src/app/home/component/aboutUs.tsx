@@ -59,7 +59,7 @@ export default function AboutUs() {
           return (
             <div
               key={index}
-              className="flex h-[auto] w-[237px] flex-col items-center justify-center gap-[20px] pb-[30px] text-center "
+              className="flex h-[100%] w-[237px] flex-col items-center justify-center gap-[20px] pb-[30px] text-center "
             >
               <div
                 style={{ backgroundColor: `${data.color}` }}

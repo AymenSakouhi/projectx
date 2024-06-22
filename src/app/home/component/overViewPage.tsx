@@ -8,7 +8,7 @@ import Image from "next/image";
 export default function OverViewPage() {
   return (
     <div className="flex h-[564px] flex-row items-center justify-center  bg-[#f5f5f5f5] text-center">
-      <div className="flex h-[80%] w-[40%] flex-col items-center justify-start gap-[61px] text-center">
+      <div className="flex h-[80%] w-[509px] flex-col items-center justify-start gap-[61px] text-center">
         <div className="flex   w-[100%] flex-row items-center justify-start gap-[19px] text-center">
           <button
             type="button"
