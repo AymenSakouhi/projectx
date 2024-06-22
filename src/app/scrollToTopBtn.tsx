@@ -21,9 +21,17 @@ export default function ScrollToTopBtn() {
     };
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div
-      className={`${!showBtn && "hidden"} fixed bottom-[30px] right-[30px] flex  h-[40px] w-[40px] items-center justify-center bg-[#858585] text-center`}
+      onClick={scrollToTop}
+      className={`z-[20] ${!showBtn && "hidden"} fixed bottom-[30px] right-[30px] flex h-[40px] w-[40px]  cursor-pointer items-center justify-center bg-[#858585] text-center hover:bg-[#fe6501]`}
     >
       <FontAwesomeIcon
         icon={faChevronUp}
