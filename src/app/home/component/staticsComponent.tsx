@@ -68,7 +68,7 @@ export default function StaticsComponent() {
               >
                 <div className=" mb-[20px] ml-[30px] mr-[30px] flex h-[176px] w-[176px] flex-col items-center justify-center rounded-[50%] border-[2px] border-white text-center ">
                   <p className=" font-openSans text-[50px] font-light leading-[75px] text-white ">
-                    {data.id === 3 ? data.number + " %" : data.number}
+                    {data.id === 3 ? data.number + "%" : data.number}
                   </p>
                 </div>
                 <h1 className=" color-white mb-[20px] w-[100%] font-Lato text-[24px] font-normal leading-[29px] text-white">

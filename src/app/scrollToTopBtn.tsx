@@ -31,7 +31,7 @@ export default function ScrollToTopBtn() {
   return (
     <div
       onClick={scrollToTop}
-      className={`z-[20] ${!showBtn && "hidden"} fixed bottom-[30px] right-[30px] flex h-[40px] w-[40px]  cursor-pointer items-center justify-center bg-[#858585] text-center hover:bg-[#fe6501]`}
+      className={`z-[20] ${!showBtn && "hidden"} fixed bottom-[30px] right-[30px] flex h-[40px] w-[40px]  cursor-pointer items-center justify-center bg-[#2020209f] text-center hover:bg-[#fe6501]`}
     >
       <FontAwesomeIcon
         icon={faChevronUp}
