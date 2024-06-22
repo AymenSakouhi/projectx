@@ -53,7 +53,7 @@ export default function AboutUs() {
           Fable daycare, preschool, and kindergarten
         </p>
       </div>
-      <Image className="  mb-[66px]" src={tempOrangeStrip} alt="" />
+      <Image src={tempOrangeStrip} alt="" />
       <div className="mt-[66px] flex w-[80%] flex-row  flex-wrap items-center justify-center gap-[33px] text-center ">
         {contentTempData.map((data: contentTempTypes, index) => {
           return (
