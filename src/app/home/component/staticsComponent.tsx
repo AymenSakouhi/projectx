@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import staticsBgImg from "public/staticsBgImg.jpg";
+import { useState } from "react";
 
 type informationDataType = {
   title: string;
@@ -48,6 +50,8 @@ const informationData: informationDataType[] = [
 ];
 
 export default function StaticsComponent() {
+  const [transformImg, setTransformImg] = useState(0);
+
   return (
     <div className=" relative flex h-auto  flex-col items-center justify-center  pb-[80px] pt-[80px] text-center">
       <Image
@@ -58,8 +62,11 @@ export default function StaticsComponent() {
         objectFit="cover"
       />
 
-      <div className="flex h-[357px] w-[75%] flex-col items-center justify-center gap-[30px]  text-center">
-        <div className="  flex  w-[80%] flex-col flex-wrap  items-center justify-start gap-[1rem] overflow-hidden  text-center">
+      <div className="flex h-[357px] w-[60%] flex-col items-center justify-center gap-[30px] overflow-hidden transition-all duration-1000">
+        <div
+          style={{ transform: `translateX(-${transformImg * 25}%)` }}
+          className="  flex  w-[100%]  flex-row items-center  justify-start  gap-[1rem] text-center"
+        >
           {informationData.map((data: informationDataType) => {
             return (
               <div
@@ -82,12 +89,26 @@ export default function StaticsComponent() {
           })}
         </div>
         <div className=" flex h-[auto] w-[auto] flex-row items-center justify-center text-center">
-          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
-          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
-          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
-          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
-          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
-          <div className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"></div>
+          <button
+            onClick={() => {
+              setTransformImg((prev) =>
+                prev === informationData.length - 1
+                  ? 1
+                  : prev === 0
+                    ? informationData.length - 1
+                    : prev - 1,
+              );
+            }}
+            className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"
+          ></button>
+          <div
+            className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"
+            onClick={() => {
+              setTransformImg((prev) =>
+                prev === informationData.length - 1 ? 0 : prev + 1,
+              );
+            }}
+          ></div>
         </div>
       </div>
     </div>
