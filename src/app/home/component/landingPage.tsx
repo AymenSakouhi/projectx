@@ -5,25 +5,26 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
+import imgData from "@/shared/data/LandingPageData";
 
-type dataImgTypes = {
-  id: number;
-  img: string;
-};
-const imgData: dataImgTypes[] = [
-  {
-    id: 1,
-    img: `https://via.placeholder.com/1980x1080`,
-  },
-  {
-    id: 2,
-    img: `https://via.placeholder.com/1980x1080`,
-  },
-  {
-    id: 3,
-    img: `https://via.placeholder.com/1980x1080`,
-  },
-];
+// type dataImgTypes = {
+//   id: number;
+//   img: string;
+// };
+// const imgData: dataImgTypes[] = [
+//   {
+//     id: 1,
+//     img: `https://via.placeholder.com/1980x1080`,
+//   },
+//   {
+//     id: 2,
+//     img: `https://via.placeholder.com/1980x1080`,
+//   },
+//   {
+//     id: 3,
+//     img: `https://via.placeholder.com/1980x1080`,
+//   },
+// ];
 
 export default function LandingPage() {
   const [transformImg, setTransformImg] = useState(0);
