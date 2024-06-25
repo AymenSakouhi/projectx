@@ -6,6 +6,18 @@ import classesData from "@/shared/data/classesData";
 import { classesTypes } from "@/shared/types/models";
 
 export default function ClassesInfo() {
+  const CheckMonths = (data: any) => {
+    let month: string = "";
+    for (let i = 0; i < data.length; i++) {
+      if (i > 0) {
+        month += "-";
+      }
+      month += `${data[i]}`;
+    }
+    console.log(month);
+    return month;
+  };
+
   return (
     <div className="flex h-auto flex-col items-center justify-center pb-[80px] pt-[60px] text-center">
       <h1 className=" mb-[15px] font-Lato font-light leading-[50px] text-[#665bdb] phone:text-[40px] laptop:text-[50px]">
@@ -36,28 +48,27 @@ export default function ClassesInfo() {
             >
               <div className=" flex h-[100%] flex-col items-start justify-start bg-[#665bdb] p-[20px] text-start phone:w-[100%] laptop:w-[50%]">
                 <h1 className=" m-[0] p-[0] font-Lato text-[24px] font-normal leading-[29px] text-[#fff]">
-                  Little Lambs
+                  {data.title}
                 </h1>
                 <p className=" font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
-                  Class name
+                  {data.className}
                 </p>
-
                 <div className="mt-[52px] flex h-[50%] w-[100%] flex-row items-center justify-between  text-center  ">
                   <div className="flex flex-col">
                     <h1 className=" font-openSans text-[16px] font-normal leading-[24px] text-white">
-                      3-4
+                      {CheckMonths(data.monthOld)}
                     </h1>
                     <p className="font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
-                      Years olds
+                      {data.monthOldText}
                     </p>
                   </div>
                   <div className="h-[100%] w-[1px] bg-[rgba(138,138,138,0.74)]"></div>
                   <div className="flex flex-col">
                     <h1 className="font-openSans text-[16px] font-normal leading-[24px] text-white">
-                      15
+                      {data.classSize}
                     </h1>
                     <p className="font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
-                      Class size
+                      {data.classSizeText}
                     </p>
                   </div>
                 </div>
