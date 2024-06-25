@@ -3,6 +3,7 @@ import { galleryData } from "@/shared/data/galleryData";
 import { galleryDataTypes } from "@/shared/types/models";
 import Image from "next/image";
 import { useState } from "react";
+import SelectedImage from "./selectedImage";
 export default function Gallery() {
   const [showImage, setShowImage] = useState(false);
 
@@ -32,6 +33,7 @@ export default function Gallery() {
           </div>
         );
       })}
+      <SelectedImage />
     </div>
   );
 }
