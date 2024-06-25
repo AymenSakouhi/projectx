@@ -4,8 +4,10 @@ import { galleryDataTypes } from "@/shared/types/models";
 import Image from "next/image";
 import { useState } from "react";
 import SelectedImage from "./selectedImage";
+
 export default function Gallery() {
   const [showImage, setShowImage] = useState(false);
+  const [imageData, setImageData] = useState({});
 
   return (
     <div className="flex h-[245px] flex-row ">
@@ -33,7 +35,9 @@ export default function Gallery() {
           </div>
         );
       })}
-      <SelectedImage />
+      <div className={`${!showImage && "hidden"} `}>
+        <SelectedImage data={imageData} showImage={setShowImage} />
+      </div>
     </div>
   );
 }
