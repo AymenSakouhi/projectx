@@ -14,7 +14,6 @@ export default function ClassesInfo() {
       }
       month += `${data[i]}`;
     }
-    console.log(month);
     return month;
   };
 

@@ -4,7 +4,7 @@ export interface insightSectionCheckBox {
 }
 
 export interface insightSectionBox {
-  img: string;
+  img: any;
   title: string;
   description: string;
 }

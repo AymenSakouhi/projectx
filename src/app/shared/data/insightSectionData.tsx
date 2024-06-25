@@ -2,7 +2,11 @@ import {
   insightSectionCheckBox,
   insightSectionBox,
 } from "@/shared/types/models";
-import checkInsightIcon from "public/check_Insight_Icon.png";
+import checkInsightIcon from "public/Insight-Icon.png";
+import insightIconOne from "public/insight_icons/icon_one.png";
+import insightIconTwo from "public/insight_icons/icon_two.png";
+import insightIconThree from "public/insight_icons/icon_three.png";
+import insightIconFour from "public/insight_icons/icon_four.png";
 
 export const insightSectionCheckBoxData: insightSectionCheckBox[] = [
   {
@@ -33,22 +37,22 @@ export const insightSectionCheckBoxData: insightSectionCheckBox[] = [
 
 export const insightSectionBoxData: insightSectionBox[] = [
   {
-    img: "https://via.placeholder.com/1980x1080",
+    img: insightIconOne,
     title: "Learning & Fun",
     description: "Praesent modea est gravida node vehicula luctus.",
   },
   {
-    img: "https://via.placeholder.com/1980x1080",
+    img: insightIconTwo,
     title: "Healthy Meals",
     description: "Terminal interdum a eleifend maecenas est morbi.",
   },
   {
-    img: "https://via.placeholder.com/1980x1080",
+    img: insightIconThree,
     title: "Friendly Place",
     description: "Terminal interdum a eleifend maecenas est morbi.",
   },
   {
-    img: "https://via.placeholder.com/1980x1080",
+    img: insightIconFour,
     title: "Children Safety",
     description: "Praesent modea est gravida node vehicula luctus.",
   },

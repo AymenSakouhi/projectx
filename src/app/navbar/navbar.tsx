@@ -91,8 +91,8 @@ export default function Navbar() {
                 <FontAwesomeIcon
                   className={`color-[#665bdb] hover:color-white `}
                   style={{
-                    height: "40px",
-                    width: "40px",
+                    height: "32px",
+                    width: "32px",
                     display: isFixed ? "none" : "flex",
                   }}
                   icon={nav.icon}
