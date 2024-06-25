@@ -1,4 +1,4 @@
-export interface dataImgTypes {
+export interface LandingPageTypes {
   id: number;
   img: string;
 }

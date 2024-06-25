@@ -11,25 +11,8 @@ import pcIcon from "public/missions_Icons/missions_Com_Icon.png";
 import heartIcon from "public/missions_Icons/missions_Heart_Icon.png";
 import cheIcon from "public/missions_Icons/missions_Che_Icon.png";
 import { useEffect, useState } from "react";
-
-type dataImgTypes = {
-  id: number;
-  img: string;
-};
-const imgData: dataImgTypes[] = [
-  {
-    id: 1,
-    img: `https://via.placeholder.com/1980x1080`,
-  },
-  {
-    id: 2,
-    img: `https://via.placeholder.com/1980x1080`,
-  },
-  {
-    id: 3,
-    img: `https://via.placeholder.com/1980x1080`,
-  },
-];
+import OverViewPageData from "@/shared/data/OverViewPageData";
+import { OverViewPageTypes } from "@/shared/types/models";
 
 export default function OverViewPage() {
   const [overViewEl, setOverViewEl] = useState(true);
@@ -42,7 +25,9 @@ export default function OverViewPage() {
         setTimerInterval((p) => p + 1);
       } else {
         setTimerInterval(0);
-        setTransformImg((prev) => (prev === imgData.length - 1 ? 0 : prev + 1));
+        setTransformImg((prev) =>
+          prev === OverViewPageData.length - 1 ? 0 : prev + 1,
+        );
       }
     }, 1000);
 
@@ -50,7 +35,6 @@ export default function OverViewPage() {
   }, [timerInterval]);
 
   return (
-
     <div className="flex  items-center justify-center bg-[#f5f5f5f5] text-center phone:h-[auto] phone:flex-col phone:pb-[30px] phone:pt-[30px] laptop:h-[564px] laptop:flex-row  laptop:pb-[0] laptop:pt-[0] ">
       <div className="flex flex-col items-center justify-start gap-[30px] text-center phone:h-[auto] phone:w-[90%] tablet:w-[90%] laptop:h-[80%] laptop:w-[35%]">
         <div className="flex w-[100%] flex-row items-center justify-start gap-[19px] text-center">
@@ -87,10 +71,10 @@ export default function OverViewPage() {
                 onClick={() => {
                   setTimerInterval(0);
                   setTransformImg((prev) =>
-                    prev === imgData.length - 1
+                    prev === OverViewPageData.length - 1
                       ? 1
                       : prev === 0
-                        ? imgData.length - 1
+                        ? OverViewPageData.length - 1
                         : prev - 1,
                   );
                 }}
@@ -101,7 +85,7 @@ export default function OverViewPage() {
                 onClick={() => {
                   setTimerInterval(0);
                   setTransformImg((prev) =>
-                    prev === imgData.length - 1 ? 0 : prev + 1,
+                    prev === OverViewPageData.length - 1 ? 0 : prev + 1,
                   );
                 }}
                 icon={faChevronRight}
@@ -114,7 +98,7 @@ export default function OverViewPage() {
             className=" flex h-[100%] w-[100%] flex-col  flex-wrap rounded-lg transition-all duration-1000"
             style={{ transform: `translateX(-${transformImg * 100}%)` }}
           >
-            {imgData.map((data: dataImgTypes, index) => {
+            {OverViewPageData.map((data: OverViewPageTypes, index: number) => {
               return (
                 <img
                   key={index}
@@ -127,7 +111,7 @@ export default function OverViewPage() {
           </div>
         </div>
         <div className="flex w-[100%] flex-row items-center justify-center text-center phone:mt-[5px]  phone:h-[76px] phone:gap-[5px] laptop:mt-[15px] laptop:h-[161px] laptop:gap-[10px]">
-          {imgData.map((data: dataImgTypes, index) => {
+          {OverViewPageData.map((data: OverViewPageTypes, index: number) => {
             return (
               <img
                 onClick={() => {

@@ -5,26 +5,8 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import imgData from "@/shared/data/LandingPageData";
-
-// type dataImgTypes = {
-//   id: number;
-//   img: string;
-// };
-// const imgData: dataImgTypes[] = [
-//   {
-//     id: 1,
-//     img: `https://via.placeholder.com/1980x1080`,
-//   },
-//   {
-//     id: 2,
-//     img: `https://via.placeholder.com/1980x1080`,
-//   },
-//   {
-//     id: 3,
-//     img: `https://via.placeholder.com/1980x1080`,
-//   },
-// ];
+import LandingPageData from "@/shared/data/LandingPageData";
+import { LandingPageTypes } from "~/app/shared/types/LandingPageTypes";
 
 export default function LandingPage() {
   const [transformImg, setTransformImg] = useState(0);
@@ -36,7 +18,9 @@ export default function LandingPage() {
         setTimerInterval((p) => p + 1);
       } else {
         setTimerInterval(0);
-        setTransformImg((prev) => (prev === imgData.length - 1 ? 0 : prev + 1));
+        setTransformImg((prev) =>
+          prev === LandingPageData.length - 1 ? 0 : prev + 1,
+        );
       }
     }, 1000);
 
@@ -50,10 +34,10 @@ export default function LandingPage() {
           onClick={() => {
             setTimerInterval(0);
             setTransformImg((prev) =>
-              prev === imgData.length - 1
+              prev === LandingPageData.length - 1
                 ? 1
                 : prev === 0
-                  ? imgData.length - 1
+                  ? LandingPageData.length - 1
                   : prev - 1,
             );
           }}
@@ -68,7 +52,7 @@ export default function LandingPage() {
           onClick={() => {
             setTimerInterval(0);
             setTransformImg((prev) =>
-              prev === imgData.length - 1 ? 0 : prev + 1,
+              prev === LandingPageData.length - 1 ? 0 : prev + 1,
             );
           }}
           className=" item-center flex cursor-pointer justify-center rounded-[50%] bg-slate-300 p-[6px] text-center hover:bg-[#fe6501]"
@@ -84,7 +68,7 @@ export default function LandingPage() {
         className="flex h-[100%] w-[100%] flex-col flex-wrap  rounded-lg transition-all duration-1000 "
         style={{ transform: `translateX(-${transformImg * 100}%)` }}
       >
-        {imgData.map((img, index) => {
+        {LandingPageData.map((img: LandingPageTypes, index: number) => {
           return (
             <img
               key={index}

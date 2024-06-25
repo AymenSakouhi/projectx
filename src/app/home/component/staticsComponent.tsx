@@ -2,52 +2,8 @@
 import Image from "next/image";
 import staticsBgImg from "public/staticsBgImg.jpg";
 import { useState } from "react";
-
-type informationDataType = {
-  title: string;
-  description: string;
-  number: number;
-  id: number;
-};
-
-const informationData: informationDataType[] = [
-  {
-    title: "Our Pupils",
-    description: "Pulvinar forte maestro node terminal est elipsis prism.",
-    number: 507,
-    id: 1,
-  },
-  {
-    title: "Teaching Hours",
-    description: "Pulvinar forte maestro node terminal est elipsis.",
-    number: 235,
-    id: 2,
-  },
-  {
-    title: "Satisfied Parents",
-    description: "Pulvinar forte maestro node terminal est elipsis.",
-    number: 100,
-    id: 3,
-  },
-  {
-    title: "Meals Per Year",
-    description: "Pulvinar forte maestro node terminal est elipsis.",
-    number: 1050,
-    id: 4,
-  },
-  {
-    title: "Morning Session",
-    description: "Pulvinar forte maestro node terminal est elipsis.",
-    number: 15,
-    id: 5,
-  },
-  {
-    title: "Full Daycare",
-    description: "Pulvinar forte maestro node terminal est elipsis.",
-    number: 25,
-    id: 6,
-  },
-];
+import StaticsComponentData from "@/shared/data/StaticsComponentData";
+import { StaticsComponentDataTypes } from "@/shared/types/models";
 
 export default function StaticsComponent() {
   const [transformImg, setTransformImg] = useState(0);
@@ -67,7 +23,7 @@ export default function StaticsComponent() {
           style={{ transform: `translateX(-${transformImg * 25}%)` }}
           className="  flex  w-[100%]  flex-row items-center  justify-start  gap-[1rem] text-center"
         >
-          {informationData.map((data: informationDataType) => {
+          {StaticsComponentData.map((data: StaticsComponentDataTypes) => {
             return (
               <div
                 key={data.id}
@@ -92,10 +48,10 @@ export default function StaticsComponent() {
           <button
             onClick={() => {
               setTransformImg((prev) =>
-                prev === informationData.length - 1
+                prev === StaticsComponentData.length - 1
                   ? 1
                   : prev === 0
-                    ? informationData.length - 1
+                    ? StaticsComponentData.length - 1
                     : prev - 1,
               );
             }}
@@ -105,7 +61,7 @@ export default function StaticsComponent() {
             className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"
             onClick={() => {
               setTransformImg((prev) =>
-                prev === informationData.length - 1 ? 0 : prev + 1,
+                prev === StaticsComponentData.length - 1 ? 0 : prev + 1,
               );
             }}
           ></div>

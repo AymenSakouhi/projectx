@@ -2,55 +2,8 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import tempOrangeStrip from "public/template_content_icons/temp_orange_strip.png";
-
-type classesTypes = {
-  title: string;
-  className: string;
-  monthOld: number[];
-  monthOldText: string;
-  classSize: number;
-  classSizeText: string;
-  classImage: string;
-};
-
-const classesData: classesTypes[] = [
-  {
-    title: "Little Lambs",
-    className: "Class name",
-    monthOld: [12, 24],
-    monthOldText: "Month olds",
-    classSize: 9,
-    classSizeText: "Class Size",
-    classImage: `https://via.placeholder.com/1980x1080`,
-  },
-  {
-    title: "Bouncy Bears",
-    className: "Class name",
-    monthOld: [2, 3],
-    monthOldText: "Month olds",
-    classSize: 12,
-    classSizeText: "Class Size",
-    classImage: `https://via.placeholder.com/1980x1080`,
-  },
-  {
-    title: "Tenderhearts",
-    className: "Class name",
-    monthOld: [3, 4],
-    monthOldText: "Month olds",
-    classSize: 15,
-    classSizeText: "Class Size",
-    classImage: `https://via.placeholder.com/1980x1080`,
-  },
-  {
-    title: "Shining Stars",
-    className: "Class name",
-    monthOld: [2, 3],
-    monthOldText: "Month olds",
-    classSize: 12,
-    classSizeText: "Class Size",
-    classImage: `https://via.placeholder.com/1980x1080`,
-  },
-];
+import classesData from "@/shared/data/classesData";
+import { classesTypes } from "@/shared/types/models";
 
 export default function ClassesInfo() {
   return (
@@ -75,7 +28,7 @@ export default function ClassesInfo() {
         </p>
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center text-center phone:w-[95%] laptop:w-[80%]">
-        {classesData.map((data, index) => {
+        {classesData.map((data: classesTypes, index: number) => {
           return (
             <div
               className=" mb-[30px] flex h-[188px] w-[509px] flex-row items-center justify-center text-center phone:mr-[0] laptop:mr-[32px]"
