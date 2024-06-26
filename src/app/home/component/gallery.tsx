@@ -9,13 +9,20 @@ export default function Gallery() {
   const [showImage, setShowImage] = useState(false);
   const [imageData, setImageData] = useState({});
 
+  const clickedImage = (data: galleryDataTypes) => {
+    setImageData(data);
+  };
+
   return (
     <div className="flex h-[245px] flex-row ">
       {galleryData.map((data: galleryDataTypes, index: number) => {
         return (
           <div key={index} className="relative w-[25%] cursor-pointer  ">
             <div
-              onClick={() => setShowImage(true)}
+              onClick={() => {
+                setShowImage(true);
+                clickedImage(data.image);
+              }}
               className="hover absolute left-0 top-0 z-[10] flex h-[100%] w-[100%] flex-col items-center justify-center text-center opacity-0 transition-all duration-500 hover:opacity-100 "
             >
               <div className="flex flex-col  items-center justify-center rounded-[50%] bg-[#57509f4f] text-center phone:h-[90px] phone:w-[90px] laptop:h-[150px] laptop:w-[150px] ">

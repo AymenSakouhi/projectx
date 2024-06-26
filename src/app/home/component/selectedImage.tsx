@@ -46,7 +46,7 @@ export default function SelectedImage({ data, showImage }) {
         <button className=" absolute right-[-5px] top-[-5px] flex flex-col items-center justify-center bg-white text-center">
           <button onClick={stopPropagation}></button>
         </button>
-        {/* <img src={data} alt="" className="h-[100%] w-[100%] object-cover" /> */}
+        <img src={data} alt="" className="h-[100%] w-[100%] object-cover" />
       </div>
     </div>
   );
