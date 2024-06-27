@@ -21,7 +21,7 @@ export default function Gallery() {
             <div
               onClick={() => {
                 setShowImage(true);
-                clickedImage(data.image);
+                clickedImage(data);
               }}
               className="hover absolute left-0 top-0 z-[10] flex h-[100%] w-[100%] flex-col items-center justify-center text-center opacity-0 transition-all duration-500 hover:opacity-100 "
             >
@@ -43,7 +43,12 @@ export default function Gallery() {
         );
       })}
       <div className={`${!showImage && "hidden"} `}>
-        <SelectedImage data={imageData} showImage={setShowImage} />
+        <SelectedImage
+          data={imageData}
+          showImage={setShowImage}
+          galleryData={galleryData}
+          setImageData={setImageData}
+        />
       </div>
     </div>
   );
