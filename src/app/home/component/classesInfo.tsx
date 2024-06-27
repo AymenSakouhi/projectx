@@ -4,6 +4,7 @@ import Image from "next/image";
 import tempOrangeStrip from "public/template_content_icons/temp_orange_strip.png";
 import classesData from "@/shared/data/classesData";
 import { classesTypes } from "@/shared/types/models";
+import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 
 export default function ClassesInfo() {
   const CheckMonths = (data: any) => {
@@ -19,25 +20,16 @@ export default function ClassesInfo() {
 
   return (
     <div className="flex h-auto flex-col items-center justify-center pb-[80px] pt-[60px] text-center">
-      <h1 className=" mb-[15px] font-Lato font-light leading-[50px] text-[#665bdb] phone:text-[40px] laptop:text-[50px]">
-        Our Classes
-      </h1>
-      <p className="mb-[30px] pt-[15px] font-openSans font-medium leading-[25px] text-[rgba(150,149,149,0.55)] phone:w-[90%] phone:text-[15px] laptop:w-[100%] laptop:text-[18px]">
-        Our preschool program has four dedicated classes
-      </p>
-      <Image className="mb-[66px]" src={tempOrangeStrip} alt="" />
-      <div className="mb-[60px] flex flex-row flex-wrap items-center justify-center gap-[33px] text-center">
-        <h1 className="font-lato h-[100%] text-start  font-normal leading-[36px] text-[#665bdb] phone:w-[90%] phone:text-[20px] laptop:w-[490px] laptop:text-[30px]">
-          We provided four classes with nine to twenty children each aged twelve
-          month to five years of age.
-        </h1>
-        <p className="h-[100%] text-start font-openSans font-normal leading-[24px] text-[rgba(150,149,149,0.55)] phone:w-[90%] phone:text-[13px] laptop:w-[490px] laptop:text-[16px]">
-          Praesent arcu gravida vehicula est node maecenas loareet morbi a dosis
-          luctus. Urna eget lacinia eleifend praesent luctus a arcu quis
-          facilisis venenatis. Aenean interdum, nibh vitae sodales, magna ante
-          feugiat elit maecenas.
-        </p>
-      </div>
+      <ComponentsHeaders
+        title={"  Our Classes"}
+        text={"Our preschool program has four dedicated classes"}
+        context={
+          "We provided four classes with nine to twenty children each aged twelve month to five years of age."
+        }
+        paragraph={
+          "Praesent arcu gravida vehicula est node maecenas loareet morbi a dosis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis facilisis venenatis. Aenean interdum, nibh vitae sodales, magna ante feugiat elit maecenas."
+        }
+      />
       <div className="flex flex-row flex-wrap items-center justify-center text-center phone:w-[95%] laptop:w-[80%]">
         {classesData.map((data: classesTypes, index: number) => {
           return (
