@@ -5,6 +5,7 @@ import StaticsComponent from "./component/staticsComponent";
 import ClassesInfo from "./component/classesInfo";
 import InsightSection from "./component/insightSection";
 import Gallery from "./component/gallery";
+import OurStaff from "./component/ourStaff";
 export default function HomePage() {
   return (
     <>
@@ -15,6 +16,7 @@ export default function HomePage() {
       <ClassesInfo />
       <InsightSection />
       <Gallery />
+      <OurStaff />
     </>
   );
 }
