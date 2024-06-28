@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { aboutUsDataTypes, aboutUsData } from "~/app/shared/data/AboutUsData";
+import { aboutUsDataSchema, aboutUsData } from "~/app/shared/data/AboutUsData";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 
 export default function AboutUs() {
@@ -15,7 +15,7 @@ export default function AboutUs() {
         {aboutUsData &&
           aboutUsData.map((data, index) => {
             try {
-              aboutUsDataTypes.parse(data);
+              aboutUsDataSchema.parse(data);
               return (
                 <div
                   key={index}

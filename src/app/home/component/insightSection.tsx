@@ -1,11 +1,9 @@
 import {
   insightSectionCheckBoxData,
   insightSectionBoxData,
+  insightSectionCheckBoxSchema,
+  insightSectionBoxSchema,
 } from "~/app/shared/data/insightSectionData";
-import {
-  insightSectionCheckBox,
-  insightSectionBox,
-} from "@/shared/types/models";
 import Image from "next/image";
 
 export default function InsightSection() {
@@ -22,8 +20,9 @@ export default function InsightSection() {
           facilisis venenatis aenean interdum.
         </p>
         <ul className="flex flex-col items-start text-start ">
-          {insightSectionCheckBoxData.map(
-            (data: insightSectionCheckBox, index: number) => {
+          {insightSectionCheckBoxData.map((data, index: number) => {
+            try {
+              insightSectionCheckBoxSchema.parse(data);
               return (
                 <li
                   key={index}
@@ -39,28 +38,41 @@ export default function InsightSection() {
                   </p>
                 </li>
               );
-            },
-          )}
+            } catch (err) {
+              console.error("Error in mapping insightSectionCheckBoxData", err);
+              return null;
+            }
+          })}
         </ul>
       </div>
       <div className="flex flex-row flex-wrap items-center justify-center text-center phone:mt-[30px] phone:w-[90%]  laptop:mt-[0] laptop:w-[35%]">
-        {insightSectionBoxData.map((data: insightSectionBox, index: number) => {
-          return (
-            <div
-              key={index}
-              className="mb-[30px] mr-[16px] flex h-auto w-[297px] flex-col items-center justify-center gap-[20px] text-center"
-            >
-              <div className="rounded-[50%] bg-white p-[25px] ">
-                <Image src={data.img} alt="" className="h-[32px] w-[32px]  " />
+        {insightSectionBoxData.map((data, index: number) => {
+          try {
+            insightSectionBoxSchema.parse(data);
+            return (
+              <div
+                key={index}
+                className="mb-[30px] mr-[16px] flex h-auto w-[297px] flex-col items-center justify-center gap-[20px] text-center"
+              >
+                <div className="rounded-[50%] bg-white p-[25px] ">
+                  <Image
+                    src={data.img}
+                    alt=""
+                    className="h-[32px] w-[32px]  "
+                  />
+                </div>
+                <h1 className="font-lato font-normal leading-[29px] text-[#56509f] phone:text-[18px] laptop:text-[24px]">
+                  {data.title}
+                </h1>
+                <p className=" font-openSans font-normal leading-[24px] text-[#707070] phone:text-[12px] laptop:text-[16px]">
+                  {data.description}
+                </p>
               </div>
-              <h1 className="font-lato font-normal leading-[29px] text-[#56509f] phone:text-[18px] laptop:text-[24px]">
-                {data.title}
-              </h1>
-              <p className=" font-openSans font-normal leading-[24px] text-[#707070] phone:text-[12px] laptop:text-[16px]">
-                {data.description}
-              </p>
-            </div>
-          );
+            );
+          } catch (err) {
+            console.error("Error in mapping insightSectionBoxData", err);
+            return null;
+          }
         })}
       </div>
     </div>

@@ -1,6 +1,13 @@
-import { galleryDataTypes } from "@/shared/types/models";
 import galleryIcon from "public/gallery_plus_icon.png";
-export const galleryData: galleryDataTypes[] = [
+import { z } from "zod";
+
+export const galleryDataSchema = z.object({
+  id: z.number(),
+  image: z.string(),
+  galleryIconPlus: z.string(),
+});
+
+export const galleryData = [
   {
     id: 1,
     image: "https://via.placeholder.com/1980x1080",

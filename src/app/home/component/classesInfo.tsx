@@ -1,6 +1,6 @@
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { classesData, classesDataTypes } from "~/app/shared/data/classesData";
+import { classesData, classesDataSchema } from "~/app/shared/data/classesData";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 
 export default function ClassesInfo() {
@@ -31,7 +31,7 @@ export default function ClassesInfo() {
         {classesData &&
           classesData.map((data, index) => {
             try {
-              classesDataTypes.parse(data);
+              classesDataSchema.parse(data);
               return (
                 <div
                   className=" mb-[30px] flex h-[188px] w-[509px] flex-row items-center justify-center text-center phone:mr-[0] laptop:mr-[32px]"

@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const classesDataTypes = z.object({
+export const classesDataSchema = z.object({
   title: z.string(),
   className: z.string(),
   monthOld: z.array(z.number()),

@@ -1,14 +1,22 @@
-import {
-  insightSectionCheckBox,
-  insightSectionBox,
-} from "@/shared/types/models";
 import checkInsightIcon from "public/Insight-Icon.png";
 import insightIconOne from "public/insight_icons/icon_one.png";
 import insightIconTwo from "public/insight_icons/icon_two.png";
 import insightIconThree from "public/insight_icons/icon_three.png";
 import insightIconFour from "public/insight_icons/icon_four.png";
+import { z } from "zod";
 
-export const insightSectionCheckBoxData: insightSectionCheckBox[] = [
+export const insightSectionCheckBoxSchema = z.object({
+  icon: z.any(),
+  text: z.string(),
+});
+
+export const insightSectionBoxSchema = z.object({
+  img: z.any(),
+  title: z.string(),
+  description: z.string(),
+});
+
+export const insightSectionCheckBoxData = [
   {
     icon: checkInsightIcon,
     text: "Comprehensive reporting on individual achievement",
@@ -35,7 +43,7 @@ export const insightSectionCheckBoxData: insightSectionCheckBox[] = [
   },
 ];
 
-export const insightSectionBoxData: insightSectionBox[] = [
+export const insightSectionBoxData = [
   {
     img: insightIconOne,
     title: "Learning & Fun",

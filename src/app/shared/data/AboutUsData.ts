@@ -4,7 +4,7 @@ import worldIcon from "public/template_content_icons/world_icon.png";
 import ringIcon from "public/template_content_icons/ring_icon.png";
 import { z } from "zod";
 
-export const aboutUsDataTypes = z.object({
+export const aboutUsDataSchema = z.object({
   title: z.string(),
   description: z.string(),
   icon: z.any(),
