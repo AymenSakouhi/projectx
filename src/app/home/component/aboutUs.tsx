@@ -1,8 +1,5 @@
 import Image from "next/image";
-import tempOrangeStrip from "public/template_content_icons/temp_orange_strip.png";
-import { contentTempTypes } from "@/shared/types/models";
-
-import contentTempData from "~/app/shared/data/AboutUsData";
+import { aboutUsDataTypes, aboutUsData } from "~/app/shared/data/AboutUsData";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 
 export default function AboutUs() {
@@ -15,33 +12,40 @@ export default function AboutUs() {
         paragraph={""}
       />
       <div className=" flex w-[80%] flex-row  flex-wrap items-center justify-center gap-[33px] text-center ">
-        {contentTempData.map((data: contentTempTypes, index: number) => {
-          return (
-            <div
-              key={index}
-              className="flex h-[100%] w-[237px] flex-col items-center justify-center gap-[20px] pb-[30px] text-center "
-            >
-              <div
-                style={{ backgroundColor: `${data.color}` }}
-                className="mb-[20px] ml-[28px] mr-[28px] flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-[100%]  text-center"
-              >
-                <Image
-                  src={data.icon}
-                  alt="content temp icon"
-                  className="h-[64px] w-[64px]"
-                />
-              </div>
+        {aboutUsData &&
+          aboutUsData.map((data, index) => {
+            try {
+              aboutUsDataTypes.parse(data);
+              return (
+                <div
+                  key={index}
+                  className="flex h-[100%] w-[237px] flex-col items-center justify-center gap-[20px] pb-[30px] text-center "
+                >
+                  <div
+                    style={{ backgroundColor: `${data.color}` }}
+                    className="mb-[20px] ml-[28px] mr-[28px] flex h-[180px] w-[180px] items-center justify-center overflow-hidden rounded-[100%]  text-center"
+                  >
+                    <Image
+                      src={data.icon}
+                      alt="content temp icon"
+                      className="h-[64px] w-[64px]"
+                    />
+                  </div>
 
-              <h1 className=" font-lato text-[24px] text-[rgb(86,80,159)]">
-                {data.title}
-              </h1>
+                  <h1 className=" font-lato text-[24px] text-[rgb(86,80,159)]">
+                    {data.title}
+                  </h1>
 
-              <p className="font-openSans text-[15px] font-medium leading-[24px] text-[rgb(112,112,112)]">
-                {data.description}
-              </p>
-            </div>
-          );
-        })}
+                  <p className="font-openSans text-[15px] font-medium leading-[24px] text-[rgb(112,112,112)]">
+                    {data.description}
+                  </p>
+                </div>
+              );
+            } catch (e: any) {
+              console.error("Invalid data:", e.errors);
+              return null;
+            }
+          })}
       </div>
     </div>
   );

@@ -1,9 +1,6 @@
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import tempOrangeStrip from "public/template_content_icons/temp_orange_strip.png";
-import classesData from "~/app/shared/data/classesData";
-import { classesTypes } from "@/shared/types/models";
+import { classesData, classesDataTypes } from "~/app/shared/data/classesData";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 
 export default function ClassesInfo() {
@@ -31,52 +28,59 @@ export default function ClassesInfo() {
         }
       />
       <div className="flex flex-row flex-wrap items-center justify-center text-center phone:w-[95%] laptop:w-[80%]">
-        {classesData.map((data: classesTypes, index: number) => {
-          return (
-            <div
-              className=" mb-[30px] flex h-[188px] w-[509px] flex-row items-center justify-center text-center phone:mr-[0] laptop:mr-[32px]"
-              key={index}
-            >
-              <div className=" flex h-[100%] flex-col items-start justify-start bg-[#665bdb] p-[20px] text-start phone:w-[100%] laptop:w-[50%]">
-                <h1 className=" m-[0] p-[0] font-Lato text-[24px] font-normal leading-[29px] text-[#fff]">
-                  {data.title}
-                </h1>
-                <p className=" font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
-                  {data.className}
-                </p>
-                <div className="mt-[52px] flex h-[50%] w-[100%] flex-row items-center justify-between  text-center  ">
-                  <div className="flex flex-col">
-                    <h1 className=" font-openSans text-[16px] font-normal leading-[24px] text-white">
-                      {CheckMonths(data.monthOld)}
+        {classesData &&
+          classesData.map((data, index) => {
+            try {
+              classesDataTypes.parse(data);
+              return (
+                <div
+                  className=" mb-[30px] flex h-[188px] w-[509px] flex-row items-center justify-center text-center phone:mr-[0] laptop:mr-[32px]"
+                  key={index}
+                >
+                  <div className=" flex h-[100%] flex-col items-start justify-start bg-[#665bdb] p-[20px] text-start phone:w-[100%] laptop:w-[50%]">
+                    <h1 className=" m-[0] p-[0] font-Lato text-[24px] font-normal leading-[29px] text-[#fff]">
+                      {data.title}
                     </h1>
-                    <p className="font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
-                      {data.monthOldText}
+                    <p className=" font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
+                      {data.className}
                     </p>
+                    <div className="mt-[52px] flex h-[50%] w-[100%] flex-row items-center justify-between  text-center  ">
+                      <div className="flex flex-col">
+                        <h1 className=" font-openSans text-[16px] font-normal leading-[24px] text-white">
+                          {CheckMonths(data.monthOld)}
+                        </h1>
+                        <p className="font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
+                          {data.monthOldText}
+                        </p>
+                      </div>
+                      <div className="h-[100%] w-[1px] bg-[rgba(138,138,138,0.74)]"></div>
+                      <div className="flex flex-col">
+                        <h1 className="font-openSans text-[16px] font-normal leading-[24px] text-white">
+                          {data.classSize}
+                        </h1>
+                        <p className="font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
+                          {data.classSizeText}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <div className="h-[100%] w-[1px] bg-[rgba(138,138,138,0.74)]"></div>
-                  <div className="flex flex-col">
-                    <h1 className="font-openSans text-[16px] font-normal leading-[24px] text-white">
-                      {data.classSize}
-                    </h1>
-                    <p className="font-openSans text-[14px] font-normal leading-[21px] text-[#cccae2]">
-                      {data.classSizeText}
-                    </p>
+                  <div className=" relative h-[100%] w-[50%]  phone:hidden laptop:flex">
+                    <img
+                      className=" absolute z-[-1]  h-[100%] w-[100%] bg-no-repeat object-cover"
+                      src={data.classImage}
+                      alt=""
+                    />
+                    <button className=" absolute bottom-0 right-0 z-[1] flex flex-row items-center justify-center gap-[5px] bg-[#fe6500] p-[16px] pl-[20px] pr-[20px] text-center font-openSans text-[14px] font-semibold leading-[14px] text-[#fff] hover:bg-[#665bdb]">
+                      CLICK HERE <FontAwesomeIcon icon={faAngleRight} />
+                    </button>
                   </div>
                 </div>
-              </div>
-              <div className=" relative h-[100%] w-[50%]  phone:hidden laptop:flex">
-                <img
-                  className=" absolute z-[-1]  h-[100%] w-[100%] bg-no-repeat object-cover"
-                  src={data.classImage}
-                  alt=""
-                />
-                <button className=" absolute bottom-0 right-0 z-[1] flex flex-row items-center justify-center gap-[5px] bg-[#fe6500] p-[16px] pl-[20px] pr-[20px] text-center font-openSans text-[14px] font-semibold leading-[14px] text-[#fff] hover:bg-[#665bdb]">
-                  CLICK HERE <FontAwesomeIcon icon={faAngleRight} />
-                </button>
-              </div>
-            </div>
-          );
-        })}
+              );
+            } catch (error: any) {
+              console.error("Invalid data:", error.errors);
+              return null;
+            }
+          })}
       </div>
     </div>
   );

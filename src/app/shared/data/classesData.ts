@@ -1,5 +1,16 @@
-import { classesTypes } from "@/shared/types/models";
-const classesData: classesTypes[] = [
+import { z } from "zod";
+
+export const classesDataTypes = z.object({
+  title: z.string(),
+  className: z.string(),
+  monthOld: z.array(z.number()),
+  monthOldText: z.string(),
+  classSize: z.number(),
+  classSizeText: z.string(),
+  classImage: z.string(),
+});
+
+export const classesData = [
   {
     title: "Little Lambs",
     className: "Class name",
@@ -37,5 +48,3 @@ const classesData: classesTypes[] = [
     classImage: `https://via.placeholder.com/1980x1080`,
   },
 ];
-
-export default classesData;
