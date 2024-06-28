@@ -2,7 +2,7 @@ import Image from "next/image";
 import tempOrangeStrip from "public/template_content_icons/temp_orange_strip.png";
 import { contentTempTypes } from "@/shared/types/models";
 
-import contentTempData from "@/shared/data/AboutUsData";
+import contentTempData from "~/app/shared/data/AboutUsData";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 
 export default function AboutUs() {

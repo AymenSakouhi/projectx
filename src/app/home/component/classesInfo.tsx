@@ -2,7 +2,7 @@ import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import tempOrangeStrip from "public/template_content_icons/temp_orange_strip.png";
-import classesData from "@/shared/data/classesData";
+import classesData from "~/app/shared/data/classesData";
 import { classesTypes } from "@/shared/types/models";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 

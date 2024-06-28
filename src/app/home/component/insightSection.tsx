@@ -1,7 +1,7 @@
 import {
   insightSectionCheckBoxData,
   insightSectionBoxData,
-} from "@/shared/data/insightSectionData";
+} from "~/app/shared/data/insightSectionData";
 import {
   insightSectionCheckBox,
   insightSectionBox,

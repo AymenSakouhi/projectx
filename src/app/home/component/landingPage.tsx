@@ -5,7 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import LandingPageData from "@/shared/data/LandingPageData";
+import LandingPageData from "~/app/shared/data/LandingPageData";
 import { LandingPageTypes } from "~/app/shared/types/LandingPageTypes";
 import CallToAction from "~/app/shared/components/callToAction";
 

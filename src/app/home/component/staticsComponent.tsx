@@ -2,7 +2,7 @@
 import Image from "next/image";
 import staticsBgImg from "public/staticsBgImg.jpg";
 import { useState } from "react";
-import StaticsComponentData from "@/shared/data/StaticsComponentData";
+import StaticsComponentData from "~/app/shared/data/StaticsComponentData";
 import { StaticsComponentDataTypes } from "@/shared/types/models";
 
 export default function StaticsComponent() {

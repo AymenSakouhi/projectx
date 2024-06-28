@@ -1,5 +1,5 @@
 "use client";
-import { galleryData } from "@/shared/data/galleryData";
+import { galleryData } from "~/app/shared/data/galleryData";
 import { galleryDataTypes } from "@/shared/types/models";
 import Image from "next/image";
 import { useState } from "react";

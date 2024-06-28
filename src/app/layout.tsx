@@ -7,7 +7,7 @@ import { GeistSans } from "geist/font/sans";
 
 import { TRPCReactProvider } from "~/trpc/react";
 import Navbar from "./navbar/navbar";
-import ScrollToTopBtn from "./shared/scrollToTopBtn";
+import ScrollToTopBtn from "./shared/components/scrollToTopBtn";
 
 export const metadata = {
   title: "Create T3 App",

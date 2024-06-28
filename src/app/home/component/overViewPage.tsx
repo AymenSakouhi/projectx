@@ -11,7 +11,7 @@ import pcIcon from "public/missions_Icons/missions_Com_Icon.png";
 import heartIcon from "public/missions_Icons/missions_Heart_Icon.png";
 import cheIcon from "public/missions_Icons/missions_Che_Icon.png";
 import { useEffect, useState } from "react";
-import OverViewPageData from "@/shared/data/OverViewPageData";
+import OverViewPageData from "~/app/shared/data/OverViewPageData";
 import { OverViewPageTypes } from "@/shared/types/models";
 
 export default function OverViewPage() {

@@ -24,7 +24,7 @@ export default function ComponentsHeaders({
         </p>
       </div>
       <Image className="mb-[66px]" src={tempOrangeStrip} alt="" />
-      {context || paragraph ? (
+      {(context || paragraph) && (
         <div className="mb-[60px] flex flex-row flex-wrap items-center justify-center gap-[33px] text-center">
           <h1 className="font-lato h-[100%] text-start  font-normal leading-[36px] text-[#665bdb] phone:w-[90%] phone:text-[20px] laptop:w-[490px] laptop:text-[30px]">
             {context}
@@ -33,7 +33,7 @@ export default function ComponentsHeaders({
             {paragraph}
           </p>
         </div>
-      ) : null}
+      )}
     </>
   );
 }
