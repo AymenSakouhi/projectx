@@ -5,7 +5,10 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import LandingPageData from "~/app/shared/data/LandingPageData";
+import {
+  LandingPageData,
+  LandingPageDataSchema,
+} from "~/app/shared/data/LandingPageData";
 import { LandingPageTypes } from "~/app/shared/types/LandingPageTypes";
 import CallToAction from "~/app/shared/components/callToAction";
 
@@ -70,16 +73,22 @@ export default function LandingPage() {
           className="flex h-[100%] w-[100%] flex-col flex-wrap  rounded-lg transition-all duration-1000 "
           style={{ transform: `translateX(-${transformImg * 100}%)` }}
         >
-          {LandingPageData.map((img: LandingPageTypes, index: number) => {
-            return (
-              <img
-                key={index}
-                src={img.img}
-                alt="Your image description"
-                style={{ width: "100%", height: "100%" }}
-                className="  bg-no-repeat object-cover"
-              />
-            );
+          {LandingPageData.map((img, index: number) => {
+            try {
+              LandingPageDataSchema.parse(img);
+              return (
+                <img
+                  key={index}
+                  src={img.img}
+                  alt="Your image description"
+                  style={{ width: "100%", height: "100%" }}
+                  className="  bg-no-repeat object-cover"
+                />
+              );
+            } catch (err) {
+              console.error("Invalid image data:", err);
+              return null;
+            }
           })}
         </div>
 

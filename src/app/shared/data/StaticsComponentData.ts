@@ -1,5 +1,13 @@
-import { StaticsComponentDataTypes } from "@/shared/types/models";
-const StaticsComponentData: StaticsComponentDataTypes[] = [
+import { z } from "zod";
+
+export const StaticsComponentDataSchema = z.object({
+  title: z.string(),
+  description: z.string(),
+  number: z.number(),
+  id: z.number(),
+});
+
+export const StaticsComponentData = [
   {
     title: "Our Pupils",
     description: "Pulvinar forte maestro node terminal est elipsis prism.",
@@ -37,5 +45,3 @@ const StaticsComponentData: StaticsComponentDataTypes[] = [
     id: 6,
   },
 ];
-
-export default StaticsComponentData;

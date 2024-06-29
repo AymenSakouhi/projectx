@@ -1,6 +1,11 @@
-import { OverViewPageTypes } from "@/shared/types/models";
+import { z } from "zod";
 
-const OverViewPageData: OverViewPageTypes[] = [
+export const OverViewPageSchema = z.object({
+  id: z.number(),
+  img: z.string(),
+});
+
+export const OverViewPageData = [
   {
     id: 1,
     img: `https://via.placeholder.com/1980x1080`,
@@ -14,5 +19,3 @@ const OverViewPageData: OverViewPageTypes[] = [
     img: `https://via.placeholder.com/1980x1080`,
   },
 ];
-
-export default OverViewPageData;

@@ -11,7 +11,10 @@ import pcIcon from "public/missions_Icons/missions_Com_Icon.png";
 import heartIcon from "public/missions_Icons/missions_Heart_Icon.png";
 import cheIcon from "public/missions_Icons/missions_Che_Icon.png";
 import { useEffect, useState } from "react";
-import OverViewPageData from "~/app/shared/data/OverViewPageData";
+import {
+  OverViewPageData,
+  OverViewPageSchema,
+} from "~/app/shared/data/OverViewPageData";
 import { OverViewPageTypes } from "@/shared/types/models";
 
 export default function OverViewPage() {
@@ -98,15 +101,21 @@ export default function OverViewPage() {
             className=" flex h-[100%] w-[100%] flex-col  flex-wrap rounded-lg transition-all duration-1000"
             style={{ transform: `translateX(-${transformImg * 100}%)` }}
           >
-            {OverViewPageData.map((data: OverViewPageTypes, index: number) => {
-              return (
-                <img
-                  key={index}
-                  className="h-[100%] w-[100%]"
-                  src={data.img}
-                  alt=""
-                />
-              );
+            {OverViewPageData.map((data, index: number) => {
+              try {
+                OverViewPageSchema.parse(data);
+                return (
+                  <img
+                    key={index}
+                    className="h-[100%] w-[100%]"
+                    src={data.img}
+                    alt=""
+                  />
+                );
+              } catch (err) {
+                console.error(`Error loading image ${data.img} : ${err}`);
+                return null;
+              }
             })}
           </div>
         </div>

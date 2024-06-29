@@ -1,5 +1,11 @@
-import { LandingPageTypes } from "@/shared/types/models";
-const LandingPageData: LandingPageTypes[] = [
+import { z } from "zod";
+
+export const LandingPageDataSchema = z.object({
+  id: z.number(),
+  img: z.string(),
+});
+
+export const LandingPageData = [
   {
     id: 1,
     img: `https://via.placeholder.com/1980x1080`,
@@ -13,5 +19,3 @@ const LandingPageData: LandingPageTypes[] = [
     img: `https://via.placeholder.com/1980x1080`,
   },
 ];
-
-export default LandingPageData;

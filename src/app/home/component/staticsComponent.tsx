@@ -2,8 +2,10 @@
 import Image from "next/image";
 import staticsBgImg from "public/staticsBgImg.jpg";
 import { useState } from "react";
-import StaticsComponentData from "~/app/shared/data/StaticsComponentData";
-import { StaticsComponentDataTypes } from "@/shared/types/models";
+import {
+  StaticsComponentData,
+  StaticsComponentDataSchema,
+} from "~/app/shared/data/StaticsComponentData";
 
 export default function StaticsComponent() {
   const [transformImg, setTransformImg] = useState(0);
@@ -23,25 +25,31 @@ export default function StaticsComponent() {
           style={{ transform: `translateX(-${transformImg * 25}%)` }}
           className="  flex  w-[100%]  flex-row items-center  justify-start  gap-[1rem] text-center"
         >
-          {StaticsComponentData.map((data: StaticsComponentDataTypes) => {
-            return (
-              <div
-                key={data.id}
-                className=" mr-[30px] flex w-[240px] flex-col items-center justify-center text-center"
-              >
-                <div className=" mb-[20px] ml-[30px] mr-[30px] flex h-[176px] w-[176px] flex-col items-center justify-center rounded-[50%] border-[2px] border-white text-center ">
-                  <p className=" font-openSans text-[50px] font-light leading-[75px] text-white ">
-                    {data.id === 3 ? data.number + "%" : data.number}
+          {StaticsComponentData.map((data) => {
+            try {
+              StaticsComponentDataSchema.parse(data);
+              return (
+                <div
+                  key={data.id}
+                  className=" mr-[30px] flex w-[240px] flex-col items-center justify-center text-center"
+                >
+                  <div className=" mb-[20px] ml-[30px] mr-[30px] flex h-[176px] w-[176px] flex-col items-center justify-center rounded-[50%] border-[2px] border-white text-center ">
+                    <p className=" font-openSans text-[50px] font-light leading-[75px] text-white ">
+                      {data.id === 3 ? data.number + "%" : data.number}
+                    </p>
+                  </div>
+                  <h1 className=" color-white mb-[20px] w-[100%] font-Lato text-[24px] font-normal leading-[29px] text-white">
+                    {data.title}
+                  </h1>
+                  <p className=" w-[100%] font-openSans text-[16px] font-normal leading-[24px] text-white">
+                    {data.description}
                   </p>
                 </div>
-                <h1 className=" color-white mb-[20px] w-[100%] font-Lato text-[24px] font-normal leading-[29px] text-white">
-                  {data.title}
-                </h1>
-                <p className=" w-[100%] font-openSans text-[16px] font-normal leading-[24px] text-white">
-                  {data.description}
-                </p>
-              </div>
-            );
+              );
+            } catch (err) {
+              console.error(err);
+              return null;
+            }
           })}
         </div>
         <div className=" flex h-[auto] w-[auto] flex-row items-center justify-center text-center">
