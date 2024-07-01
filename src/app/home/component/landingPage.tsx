@@ -9,7 +9,6 @@ import {
   LandingPageData,
   LandingPageDataSchema,
 } from "~/app/shared/data/LandingPageData";
-import { LandingPageTypes } from "~/app/shared/types/LandingPageTypes";
 import CallToAction from "~/app/shared/components/callToAction";
 
 export default function LandingPage() {
