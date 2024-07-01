@@ -2,7 +2,7 @@
 import { galleryData, galleryDataSchema } from "~/app/shared/data/galleryData";
 import Image from "next/image";
 import { useState } from "react";
-import SelectedImage from "./selectedImage";
+import SelectedImage from "../../shared/components/selectedImage";
 import CallToAction from "~/app/shared/components/callToAction";
 
 export default function Gallery() {
