@@ -29,11 +29,20 @@ export default function OurStaff() {
                 className="flex items-center justify-center gap-[10px] text-start transition-all  duration-500 phone:h-[600px] phone:w-[360px] phone:flex-col laptop:h-[333px] laptop:w-[509px] laptop:flex-row"
               >
                 <div className="relative flex h-[100%] flex-col text-center transition-all duration-500 hover:-translate-y-3 hover:bg-[#f1f1f1af] phone:w-[100%] laptop:w-[50%] ">
-                  <img
-                    className="h-[70%]"
-                    src="https://via.placeholder.com/1980x1080"
-                    alt=""
-                  />
+                  <div className="relative h-[70%]">
+                    <div className="absolute left-0 top-0 z-[10] flex h-[100%] w-[100%] flex-col items-center justify-center text-center opacity-0 transition-all duration-500 hover:opacity-100 ">
+                      <div className=" flex flex-col items-center justify-center rounded-[50%] bg-[#57509f4f] text-center phone:h-[90px] phone:w-[90px] laptop:h-[150px] laptop:w-[150px] ">
+                        <Image
+                          src={data.galleryIconPlus}
+                          className="h-[28px] w-[28px]"
+                          alt=""
+                          objectFit="cover"
+                        />
+                      </div>
+                    </div>
+
+                    <img className="h-[100%]" src={data.image} alt="" />
+                  </div>
                   <h1 className="mb-[4px] mt-[20px] font-Lato text-[18px] font-normal leading-[25px] text-[#56509f]">
                     {data.title}
                   </h1>

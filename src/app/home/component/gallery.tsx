@@ -9,7 +9,8 @@ export default function Gallery() {
   const [showImage, setShowImage] = useState(false);
   const [imageData, setImageData] = useState({});
 
-  const clickedImage = (data) => {
+  const clickedImage = (data: any) => {
+    galleryDataSchema.parse(data);
     setImageData(data);
   };
 

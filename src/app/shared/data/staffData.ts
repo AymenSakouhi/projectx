@@ -1,4 +1,5 @@
 import { z } from "zod";
+import galleryIcon from "public/gallery_plus_icon.png";
 import {
   faFacebook,
   faInstagram,
@@ -26,6 +27,7 @@ export const staffData = [
       { icon: faInstagram, url: "/" },
       { icon: faTiktok, url: "/" },
     ],
+    galleryIconPlus: galleryIcon,
   },
   {
     image: `https://via.placeholder.com/1980x1080`,
@@ -39,6 +41,7 @@ export const staffData = [
       { icon: faInstagram, url: "/" },
       { icon: faTiktok, url: "/" },
     ],
+    galleryIconPlus: galleryIcon,
   },
   {
     image: `https://via.placeholder.com/1980x1080`,
@@ -52,6 +55,7 @@ export const staffData = [
       { icon: faInstagram, url: "/" },
       { icon: faTiktok, url: "/" },
     ],
+    galleryIconPlus: galleryIcon,
   },
   {
     image: `https://via.placeholder.com/1980x1080`,
@@ -65,5 +69,6 @@ export const staffData = [
       { icon: faInstagram, url: "/" },
       { icon: faTiktok, url: "/" },
     ],
+    galleryIconPlus: galleryIcon,
   },
 ];
