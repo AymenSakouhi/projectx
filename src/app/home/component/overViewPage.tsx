@@ -15,7 +15,6 @@ import {
   OverViewPageData,
   OverViewPageSchema,
 } from "~/app/shared/data/OverViewPageData";
-import { OverViewPageTypes } from "@/shared/types/models";
 
 export default function OverViewPage() {
   const [overViewEl, setOverViewEl] = useState(true);
@@ -120,7 +119,7 @@ export default function OverViewPage() {
           </div>
         </div>
         <div className="flex w-[100%] flex-row items-center justify-center text-center phone:mt-[5px]  phone:h-[76px] phone:gap-[5px] laptop:mt-[15px] laptop:h-[161px] laptop:gap-[10px]">
-          {OverViewPageData.map((data: OverViewPageTypes, index: number) => {
+          {OverViewPageData.map((data, index: number) => {
             return (
               <img
                 onClick={() => {
