@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { aboutUsDataSchema, aboutUsData } from "~/app/shared/data/AboutUsData";
+import { aboutUsDataSchema, aboutUsData } from "~/app/shared/data/aboutUsData";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 
 export default function AboutUs() {

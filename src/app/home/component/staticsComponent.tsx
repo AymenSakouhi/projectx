@@ -5,7 +5,7 @@ import { useState } from "react";
 import {
   StaticsComponentData,
   StaticsComponentDataSchema,
-} from "~/app/shared/data/StaticsComponentData";
+} from "~/app/shared/data/staticsComponentData";
 
 export default function StaticsComponent() {
   const [transformImg, setTransformImg] = useState(0);

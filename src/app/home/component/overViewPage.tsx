@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
 import {
   OverViewPageData,
   OverViewPageSchema,
-} from "~/app/shared/data/OverViewPageData";
+} from "~/app/shared/data/overViewPageData";
 
 export default function OverViewPage() {
   const [overViewEl, setOverViewEl] = useState(true);
