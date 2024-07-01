@@ -3,30 +3,30 @@ import { z } from "zod";
 
 export const galleryDataSchema = z.object({
   id: z.number(),
-  image: z.any(),
-  galleryIconPlus: z.string(),
+  image: z.string(),
+  galleryIconPlus: z.any(),
 });
 
 export const galleryData = [
   {
     id: 1,
-    image: "https://via.placeholder.com/80x80",
+    image: "https://via.placeholder.com/1980x1080",
     galleryIconPlus: galleryIcon,
   },
   {
     id: 2,
-    image: "https://via.placeholder.com/80x80",
+    image: "https://via.placeholder.com/1980x1080",
     galleryIconPlus: galleryIcon,
   },
 
   {
     id: 3,
-    image: "https://via.placeholder.com/80x80",
+    image: "https://via.placeholder.com/1980x1080",
     galleryIconPlus: galleryIcon,
   },
   {
     id: 4,
-    image: "https://via.placeholder.com/80x80",
+    image: "https://via.placeholder.com/1980x1080",
     galleryIconPlus: galleryIcon,
   },
 ];

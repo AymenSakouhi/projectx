@@ -9,19 +9,18 @@ export default function Gallery() {
   const [showImage, setShowImage] = useState(false);
   const [imageData, setImageData] = useState({});
 
-  const clickedImage = (data: any) => {
-    galleryDataSchema.parse(data);
+  const clickedImage = (data) => {
     setImageData(data);
   };
 
   return (
     <>
       <div className="flex h-[245px] flex-row ">
-        {galleryData.map((data, index: number) => {
+        {galleryData.map((data) => {
           try {
             galleryDataSchema.parse(data);
             return (
-              <div key={index} className="relative w-[25%] cursor-pointer  ">
+              <div key={data.id} className="relative w-[25%] cursor-pointer  ">
                 <div
                   onClick={() => {
                     setShowImage(true);
