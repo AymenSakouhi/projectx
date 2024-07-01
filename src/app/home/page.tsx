@@ -6,6 +6,7 @@ import ClassesInfo from "./component/classesInfo";
 import InsightSection from "./component/insightSection";
 import Gallery from "./component/gallery";
 import OurStaff from "./component/ourStaff";
+import QuotesComponent from "./component/quotesComponent";
 export default function HomePage() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function HomePage() {
       <InsightSection />
       <Gallery />
       <OurStaff />
+      <QuotesComponent />
     </>
   );
 }

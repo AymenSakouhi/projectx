@@ -65,14 +65,14 @@ export default function StaticsComponent() {
             }}
             className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"
           ></button>
-          <div
+          <button
             className="m-[3px] h-[12px] w-[45px] cursor-pointer border-2 border-white hover:border-slate-300"
             onClick={() => {
               setTransformImg((prev) =>
                 prev === StaticsComponentData.length - 1 ? 0 : prev + 1,
               );
             }}
-          ></div>
+          ></button>
         </div>
       </div>
     </div>
