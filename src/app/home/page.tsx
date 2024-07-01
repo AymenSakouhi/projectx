@@ -7,6 +7,7 @@ import InsightSection from "./component/insightSection";
 import Gallery from "./component/gallery";
 import OurStaff from "./component/ourStaff";
 import QuotesComponent from "./component/quotesComponent";
+import WhatIsNew from "./component/whatIsNew";
 export default function HomePage() {
   return (
     <>
@@ -19,6 +20,7 @@ export default function HomePage() {
       <Gallery />
       <OurStaff />
       <QuotesComponent />
+      <WhatIsNew />
     </>
   );
 }
