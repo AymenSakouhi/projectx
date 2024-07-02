@@ -8,8 +8,10 @@ export const whatsNewDataSchema = z.object({
   title: z.string(),
   description: z.string(),
   name: z.string(),
-  eventNames: z.string(),
+  eventTags: z.string(),
   classRoom: z.number(),
+  eventIconOne: z.any(),
+  eventIconTwo: z.any(),
 });
 
 export const whatsNewData = [
