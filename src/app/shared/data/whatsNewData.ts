@@ -1,3 +1,4 @@
+import { faPaperclip, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
 import { z } from "zod";
 
 export const whatsNewDataSchema = z.object({
@@ -8,6 +9,7 @@ export const whatsNewDataSchema = z.object({
   description: z.string(),
   name: z.string(),
   eventNames: z.string(),
+  classRoom: z.number(),
 });
 
 export const whatsNewData = [
@@ -20,6 +22,9 @@ export const whatsNewData = [
       "Magna est consectetur interdum modest dictum. Curabitur est faucibus, malesuada esttincidunt etos et mauris, nunc a libero govum est cuprum.",
     name: "Anna Brown",
     eventTags: "Events, Fun",
+    classRoom: 12,
+    eventIconOne: faPenToSquare,
+    eventIconTwo: faPaperclip,
   },
   {
     id: 2,
@@ -30,6 +35,9 @@ export const whatsNewData = [
       "Magna est consectetur interdum modest dictum. Curabitur est faucibus, malesuada esttincidunt etos et mauris, nunc a libero govum est cuprum.",
     name: "Anna Brown",
     eventTags: "Dance, Education",
+    classRoom: 4,
+    eventIconOne: faPenToSquare,
+    eventIconTwo: faPaperclip,
   },
   {
     id: 3,
@@ -40,5 +48,8 @@ export const whatsNewData = [
       "Magna est consectetur interdum modest dictum. Curabitur est faucibus, malesuada esttincidunt etos et mauris, nunc a libero govum est cuprum.",
     name: "Anna Brown",
     eventTags: "Games, General",
+    classRoom: 4,
+    eventIconOne: faPenToSquare,
+    eventIconTwo: faPaperclip,
   },
 ];
