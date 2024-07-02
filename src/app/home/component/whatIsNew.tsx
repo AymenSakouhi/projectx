@@ -1,8 +1,14 @@
+"use client";
+import { useState } from "react";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 import { whatsNewData, whatsNewDataSchema } from "@/shared/data/whatsNewData";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import SelectedImage from "~/app/shared/components/selectedImage";
 export default function WhatIsNew() {
+  const [showImage, setShowImage] = useState(false);
+  const [imageData, setImageData] = useState({});
+
   return (
     <div className="flex h-auto flex-col items-center  justify-start pb-[85px] pt-[60px] text-center">
       <ComponentsHeaders
@@ -24,6 +30,22 @@ export default function WhatIsNew() {
                   {data.date}
                 </h1>
                 <div className="relative   mb-[19px]">
+                  <div
+                    onClick={() => {
+                      setShowImage(true);
+                      setImageData(data);
+                    }}
+                    className=" absolute left-0 top-0 z-[10] flex h-[100%] w-[100%] cursor-pointer flex-col items-center justify-center text-center opacity-0 transition-all duration-500 hover:opacity-100 "
+                  >
+                    <div className=" flex flex-col items-center justify-center rounded-[50%] bg-[#57509f4f] text-center phone:h-[90px] phone:w-[90px] laptop:h-[150px] laptop:w-[150px] ">
+                      <Image
+                        src={data.icon}
+                        className="h-[28px] w-[28px]"
+                        alt=""
+                        objectFit="cover"
+                      />
+                    </div>
+                  </div>
                   <img src={`${data.image}`} />
                   <h2 className="absolute bottom-0 right-0 flex h-[40px] w-[44px] flex-col items-center justify-center bg-[#FE6500] text-center font-openSans text-[20px] font-normal leading-[30px] text-[#fff]">
                     {data.classRoom}
@@ -66,6 +88,14 @@ export default function WhatIsNew() {
       </div>
       <div>
         <button>GO TO BLOG ICONS</button>
+      </div>
+      <div className={`${!showImage && "hidden"} `}>
+        <SelectedImage
+          data={imageData}
+          showImage={setShowImage}
+          galleryData={""}
+          setImageData={""}
+        />
       </div>
     </div>
   );

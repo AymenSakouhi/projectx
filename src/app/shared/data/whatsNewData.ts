@@ -1,4 +1,5 @@
 import { faPaperclip, faPenToSquare } from "@fortawesome/free-solid-svg-icons";
+import whatsNewIcon from "public/gallery_plus_icon.png";
 import { z } from "zod";
 
 export const whatsNewDataSchema = z.object({
@@ -12,6 +13,7 @@ export const whatsNewDataSchema = z.object({
   classRoom: z.number(),
   eventIconOne: z.any(),
   eventIconTwo: z.any(),
+  icon: z.any(),
 });
 
 export const whatsNewData = [
@@ -27,6 +29,7 @@ export const whatsNewData = [
     classRoom: 12,
     eventIconOne: faPenToSquare,
     eventIconTwo: faPaperclip,
+    icon: whatsNewIcon,
   },
   {
     id: 2,
@@ -40,6 +43,7 @@ export const whatsNewData = [
     classRoom: 4,
     eventIconOne: faPenToSquare,
     eventIconTwo: faPaperclip,
+    icon: whatsNewIcon,
   },
   {
     id: 3,
@@ -53,5 +57,6 @@ export const whatsNewData = [
     classRoom: 4,
     eventIconOne: faPenToSquare,
     eventIconTwo: faPaperclip,
+    icon: whatsNewIcon,
   },
 ];
