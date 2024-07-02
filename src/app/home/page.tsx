@@ -8,6 +8,7 @@ import Gallery from "./component/gallery";
 import OurStaff from "./component/ourStaff";
 import QuotesComponent from "./component/quotesComponent";
 import WhatIsNew from "./component/whatIsNew";
+import Contact from "./component/contact";
 export default function HomePage() {
   return (
     <>
@@ -21,6 +22,7 @@ export default function HomePage() {
       <OurStaff />
       <QuotesComponent />
       <WhatIsNew />
+      <Contact />
     </>
   );
 }

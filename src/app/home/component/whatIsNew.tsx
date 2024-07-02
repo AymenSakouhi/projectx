@@ -5,6 +5,7 @@ import { whatsNewData, whatsNewDataSchema } from "@/shared/data/whatsNewData";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SelectedImage from "~/app/shared/components/selectedImage";
+import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 export default function WhatIsNew() {
   const [showImage, setShowImage] = useState(false);
   const [imageData, setImageData] = useState({});
@@ -57,7 +58,7 @@ export default function WhatIsNew() {
                 <p className="mb-[20px] font-openSans text-[16px] font-normal leading-[24px] text-[#707070]">
                   {data.description}
                 </p>
-                <hr className="mb-[14px]" />
+                <hr className="mb-[10px]" />
                 <div className="mb-[5px] mt-[10px] flex w-[100%] flex-row items-start justify-start text-start">
                   <div className="start flex w-[50%] flex-row  items-center justify-start gap-[5px] text-center">
                     <FontAwesomeIcon
@@ -86,9 +87,12 @@ export default function WhatIsNew() {
           }
         })}
       </div>
-      <div>
-        <button>GO TO BLOG ICONS</button>
-      </div>
+
+      <button className="flex h-[45px] w-[140px] flex-row items-center justify-center gap-[10px] bg-[#fe6500] text-center font-openSans text-[14px] font-semibold leading-[14px] text-[#ffffff] hover:bg-[#56509f]">
+        GO TO BLOG
+        <FontAwesomeIcon icon={faLocationArrow} />
+      </button>
+
       <div className={`${!showImage && "hidden"} `}>
         <SelectedImage
           data={imageData}
