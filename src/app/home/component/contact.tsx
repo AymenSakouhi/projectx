@@ -51,16 +51,37 @@ export default function Contact() {
           }
         })}
       </div>
-      <div>
-        <div>
-          <input type="text" id="text" placeholder="Your Name*" />
-          <input type="email" id="email" placeholder="Your E-mail*" />
-          <input type="text" id="subject" placeholder="Subject" />
+      <div className="flex h-auto w-[80%] flex-wrap items-center  justify-center gap-[33px] text-center phone:flex-col laptop:flex-row">
+        <div className="flex h-[200px] flex-col items-start justify-start gap-[30px] text-start phone:w-[100%] laptop:w-[30%]">
+          <input
+            className="w-[100%] rounded-[2px] border-2 border-slate-200 p-[10px]  pl-[15px] outline-none   focus:border-b-2 focus:border-l-0 focus:border-r-0  focus:border-t-0 focus:border-[#fe6500]"
+            type="text"
+            id="text"
+            placeholder="Your Name*"
+          />
+          <input
+            className="w-[100%] rounded-[2px] border-2 border-slate-200  p-[10px] pl-[15px] outline-none    focus:border-b-2 focus:border-l-0 focus:border-r-0  focus:border-t-0 focus:border-[#fe6500]"
+            type="email"
+            id="email"
+            placeholder="Your E-mail*"
+          />
+          <input
+            className="w-[100%] rounded-[2px] border-2 border-slate-200 p-[10px] pl-[15px] outline-none    focus:border-b-2 focus:border-l-0 focus:border-r-0 focus:border-t-0 focus:border-[#fe6500]"
+            id="subject"
+            placeholder="Subject"
+          />
         </div>
-        <div>
-          <textarea placeholder="Message*"></textarea>
+        <div className=" h-[200px] phone:w-[100%] laptop:w-[30%]">
+          <textarea
+            placeholder="Message*"
+            className="h-[100%] w-[100%] resize-none rounded-[2px] border-2 border-slate-200  p-[10px]    pl-[15px] outline-none focus:border-b-2 focus:border-l-0 focus:border-r-0 focus:border-t-0 focus:border-[#fe6500]"
+          ></textarea>
         </div>
-        <button className="mt-[50px] ">SEND MESSAGE</button>
+        <div className="w-[100%]">
+          <button className="mt-[50px] h-[45px] w-[144px] bg-[#fe6500]  font-openSans text-[14px] font-semibold leading-[14px] text-[#ffff] hover:bg-[#56509f] ">
+            SEND MESSAGE
+          </button>
+        </div>
       </div>
     </div>
   );
