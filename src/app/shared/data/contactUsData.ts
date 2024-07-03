@@ -11,7 +11,7 @@ export const contactUsDataSchema = z.object({
   id: z.number(),
   icon: z.any(),
   title: z.string(),
-  name: z.number(),
+  name: z.string(),
   address: z.string(),
   postal: z.string(),
 });

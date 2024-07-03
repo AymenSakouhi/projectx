@@ -1,25 +1,55 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
-
+import {
+  contactUsData,
+  contactUsDataSchema,
+} from "~/app/shared/data/contactUsData";
 export default function Contact() {
   return (
-    <div className="flex h-[90vh] flex-col items-center justify-start pb-[80px] pt-[60px] text-center">
+    <div className="flex h-auto min-h-[90vh] flex-col items-center justify-start pb-[80px] pt-[60px] text-center">
       <ComponentsHeaders
         title={"Contact Us"}
         text={"Our postal address and contact details"}
         context={""}
         paragraph={""}
       />
-      <div className="mb-[50px] mt-[66px]">
-        <div>
-          <Image src={""} alt="" />
-          <h1></h1>
-          <div>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-        </div>
+      <div className="mb-[50px]  flex flex-row flex-wrap items-center justify-center gap-[33px] text-center ">
+        {contactUsData.map((data, index) => {
+          try {
+            contactUsDataSchema.parse(data);
+            return (
+              <div key={index} className="h-[235px] w-[220px] ">
+                <FontAwesomeIcon
+                  style={{
+                    height: "32px",
+                    width: "32px",
+                    marginBottom: "50px",
+                  }}
+                  className=" text-[#fe6500]"
+                  icon={data.icon}
+                />
+                <h1 className="mb-[20px] font-Lato text-[24px] font-normal leading-[29px] text-[#56509f]">
+                  {data.title}
+                </h1>
+                <div>
+                  <p className=" font-openSans text-[16px] font-normal leading-[24px] text-[#707070]">
+                    {data.name}
+                  </p>
+                  <p className=" font-openSans text-[16px] font-normal leading-[24px] text-[#707070]">
+                    {data.address}
+                  </p>
+                  <p className=" font-openSans text-[16px] font-normal leading-[24px] text-[#707070]">
+                    {data.postal}
+                  </p>
+                </div>
+              </div>
+            );
+          } catch (error) {
+            console.error(error);
+            return null;
+          }
+        })}
       </div>
       <div>
         <div>
@@ -30,7 +60,7 @@ export default function Contact() {
         <div>
           <textarea placeholder="Message*"></textarea>
         </div>
-        <button>SEND MESSAGE</button>
+        <button className="mt-[50px] ">SEND MESSAGE</button>
       </div>
     </div>
   );
