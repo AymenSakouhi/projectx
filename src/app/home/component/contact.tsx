@@ -18,8 +18,8 @@ export default function Contact() {
   );
 
   return (
-    <div className="flex h-auto min-h-[90vh] flex-col items-center justify-start pb-[80px] pt-[60px] text-center">
-      <div className="mb-[60px] h-[300px] w-[100%] ">
+    <div className="  flex h-auto min-h-[90vh] flex-col items-center justify-start pb-[80px] pt-[60px] text-center">
+      <div className=" mb-[60px] h-[300px] w-[100%] ">
         <Map posix={[4.79029, -75.69003]} />
       </div>
 
