@@ -162,7 +162,7 @@ const OverViewElements = () => {
             <Image src={clockIcon} alt="" />
           </div>
           <div className=" flex  flex-col items-start justify-start gap-[20px] text-start phone:w-[70%] laptop:w-[80%] ">
-            <h1 className=" font-lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px] ">
+            <h1 className=" font-Lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px] ">
               Full Day Sessions
             </h1>
             <p className="  font-openSans font-normal leading-[24px] text-[rgb(112,112,112)] phone:w-[100%] phone:text-[11px] phone:text-[16px] laptop:w-[90%] laptop:text-[16px]">
@@ -176,7 +176,7 @@ const OverViewElements = () => {
             <Image src={connectIcon} alt="" />
           </div>
           <div className=" flex  flex-col items-start justify-start gap-[20px] text-start phone:w-[70%] laptop:w-[80%] ">
-            <h1 className=" font-lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px] ">
+            <h1 className=" font-Lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px] ">
               Full Day Sessions
             </h1>
             <p className=" font-openSans font-normal leading-[24px] text-[rgb(112,112,112)] phone:w-[100%] phone:text-[11px] laptop:w-[90%] laptop:text-[16px]">
@@ -198,7 +198,7 @@ const MissionsElements = () => {
           <Image src={pcIcon} alt="" />
         </div>
         <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
-          <h1 className=" font-lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px] ">
+          <h1 className=" font-Lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px] ">
             Online Access
           </h1>
           <p className=" font-openSans font-normal leading-[24px] text-[rgb(112,112,112)] phone:w-[100%] phone:text-[11px] laptop:w-[90%] laptop:text-[16px]">
@@ -212,7 +212,7 @@ const MissionsElements = () => {
           <Image src={heartIcon} alt="" />
         </div>
         <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
-          <h1 className=" font-lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px] ">
+          <h1 className=" font-Lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px] ">
             Maecenas Node
           </h1>
           <p className="font-openSans font-normal leading-[24px] text-[rgb(112,112,112)] phone:w-[100%] phone:text-[11px] laptop:w-[90%] laptop:text-[16px]">
@@ -226,7 +226,7 @@ const MissionsElements = () => {
           <Image src={cheIcon} alt="" />
         </div>
         <div className=" flex w-[80%] flex-col items-start justify-start gap-[20px] text-start ">
-          <h1 className=" font-lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px]  ">
+          <h1 className=" font-Lato font-normal leading-[29px] text-[rgb(86,80,159)] phone:text-[16px] laptop:text-[24px]  ">
             Praesent Morbi
           </h1>
           <p className=" font-openSans font-normal leading-[24px] text-[rgb(112,112,112)] phone:w-[100%] phone:text-[11px] laptop:w-[90%] laptop:text-[16px]">

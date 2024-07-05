@@ -11,7 +11,7 @@ export default function AboutUs() {
         context={""}
         paragraph={""}
       />
-      <div className=" flex w-[80%] flex-row  flex-wrap items-center justify-center gap-[33px] text-center ">
+      <div className=" flex h-[400px] w-[80%]  flex-row flex-wrap items-center justify-center gap-[33px] text-center ">
         {aboutUsData &&
           aboutUsData.map((data, index) => {
             try {
@@ -19,7 +19,7 @@ export default function AboutUs() {
               return (
                 <div
                   key={index}
-                  className="flex h-[100%] w-[237px] flex-col items-center justify-center gap-[20px] pb-[30px] text-center "
+                  className=" flex h-[100%] w-[237px] flex-col items-center justify-start gap-[20px] pb-[30px] text-center "
                 >
                   <div
                     style={{ backgroundColor: `${data.color}` }}
@@ -32,11 +32,11 @@ export default function AboutUs() {
                     />
                   </div>
 
-                  <h1 className=" font-lato text-[24px] text-[rgb(86,80,159)]">
+                  <h1 className=" font-Lato text-[24px] font-normal text-[rgb(86,80,159)]">
                     {data.title}
                   </h1>
 
-                  <p className="font-openSans text-[15px] font-medium leading-[24px] text-[rgb(112,112,112)]">
+                  <p className="font-openSans text-[16px] font-normal leading-[24px] text-[rgb(112,112,112)]">
                     {data.description}
                   </p>
                 </div>

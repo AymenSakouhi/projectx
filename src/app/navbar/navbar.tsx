@@ -40,7 +40,7 @@ export default function Navbar() {
       <div className="flex h-[100%] flex-col items-center justify-center text-center phone:w-[100%] laptop:w-[50%]">
         <Link href="/">
           <Image
-            className="h-[100%]  w-[100px] tablet:h-[100%] tablet:w-[189px]"
+            className={`h-[100%] w-[100px] tablet:h-[100%] tablet:w-[189px] ${isFixed && "tablet:h-[60px] tablet:w-[90px]"}`}
             src={Logo}
             alt=""
           />
@@ -55,7 +55,8 @@ export default function Navbar() {
                 <Link
                   key={index}
                   href={nav.path}
-                  className={`flex h-[100%] flex-col items-center justify-center text-center font-light leading-[24px] text-[#665bdb] hover:bg-[#fe6501] hover:text-white phone:text-[13px]  tablet:text-[14px] laptop:p-[7px]  laptop:pb-[20px]  laptop:pt-[25px] laptop:text-[15px]  desktop:p-[10px] desktop:pb-[25px]  desktop:pt-[30px] desktop:text-[18px]`}
+                  className={` flex h-[100%] flex-col items-center justify-center text-center font-openSans font-normal
+                     leading-[24px] text-[#665bdb] hover:bg-[#fe6501] hover:text-white phone:text-[13px]  tablet:text-[14px] laptop:p-[7px]  laptop:pb-[20px]  laptop:pt-[25px] laptop:text-[15px]  desktop:p-[10px] desktop:pb-[25px]  desktop:pt-[30px] desktop:text-[18px]`}
                 >
                   <FontAwesomeIcon
                     className={`color-[#665bdb] hover:color-white `}
@@ -103,7 +104,7 @@ export default function Navbar() {
                     <Link
                       key={index}
                       href={nav.path}
-                      className=" flex h-[100%] flex-col items-start justify-start text-start font-light leading-[24px] text-[#665bdb] hover:bg-[#fe6501] hover:text-white phone:text-[13px]  tablet:text-[14px] laptop:p-[7px] laptop:pb-[20px]  laptop:pt-[25px] laptop:text-[15px]  desktop:p-[10px] desktop:pb-[25px]  desktop:pt-[30px] desktop:text-[18px]"
+                      className=" flex h-[100%] flex-col items-start justify-start text-start font-openSans font-normal leading-[24px] text-[#665bdb] hover:bg-[#fe6501] hover:text-white phone:text-[13px]  tablet:text-[14px] laptop:p-[7px] laptop:pb-[20px]  laptop:pt-[25px] laptop:text-[15px]  desktop:p-[10px] desktop:pb-[25px]  desktop:pt-[30px] desktop:text-[18px]"
                     >
                       <p className="mb-[15px] mt-[0px] phone:m-[12px] laptop:m-[19px] ">
                         {nav.name}

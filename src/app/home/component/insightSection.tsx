@@ -61,7 +61,7 @@ export default function InsightSection() {
                     className="h-[32px] w-[32px]  "
                   />
                 </div>
-                <h1 className="font-lato font-normal leading-[29px] text-[#56509f] phone:text-[18px] laptop:text-[24px]">
+                <h1 className="font-Lato font-normal leading-[29px] text-[#56509f] phone:text-[18px] laptop:text-[24px]">
                   {data.title}
                 </h1>
                 <p className=" font-openSans font-normal leading-[24px] text-[#707070] phone:text-[12px] laptop:text-[16px]">

@@ -12,6 +12,27 @@ export default function OurStaff() {
   const [showImage, setShowImage] = useState(false);
   const [imageData, setImageData] = useState({});
 
+  const createButton = (data: any) => {
+    console.log(data[0]);
+    let button = [];
+
+    for (let i = 0; i < data.length; i++) {
+      button.push(
+        <button className=" flex h-[40px] w-[40px] flex-col items-center justify-center bg-orange-500 text-center hover:bg-[#665bdb]">
+          <FontAwesomeIcon
+            style={{
+              height: "23px",
+              width: "23px",
+              color: "white",
+            }}
+            icon={data[i][0]}
+          />
+        </button>,
+      );
+    }
+    return button;
+  };
+
   return (
     <div className="flex h-auto flex-col items-center pb-[50px] pt-[60px] text-center">
       <ComponentsHeaders
@@ -74,7 +95,8 @@ export default function OurStaff() {
                     {data.description}
                   </p>
                   <div className="ml-[15px] mt-[25px] flex flex-row items-center  gap-1 text-center">
-                    <button className=" flex h-[40px] w-[40px] flex-col items-center justify-center bg-orange-500 text-center hover:bg-[#665bdb]">
+                    {createButton(data.socialMedia)}
+                    {/* <button className=" flex h-[40px] w-[40px] flex-col items-center justify-center bg-orange-500 text-center hover:bg-[#665bdb]">
                       <FontAwesomeIcon
                         style={{
                           height: "23px",
@@ -103,7 +125,7 @@ export default function OurStaff() {
                         }}
                         icon={faFacebook}
                       />
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </div>

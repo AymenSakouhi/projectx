@@ -1,7 +1,6 @@
 import {
   faCaretLeft,
   faCaretRight,
-  faPause,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -77,6 +76,9 @@ export default function SelectedImage({
           ></button>
         </div>
         <img
+          onClick={(e) => {
+            stopPropagation(e);
+          }}
           src={data.image}
           alt=""
           className="h-[100%] w-[100%] object-cover"
