@@ -4,14 +4,14 @@ import ComponentsHeaders from "~/app/shared/components/componentsHeaders";
 
 export default function AboutUs() {
   return (
-    <div className="flex h-[auto] min-h-[684px] flex-col items-center justify-center pb-[50px] pt-[60px] text-center">
+    <div className="flex h-auto min-h-[684px] flex-col items-center justify-center pb-[50px] pt-[60px] text-center">
       <ComponentsHeaders
         title={"Welcome to Fable"}
         text={"Our preschool program has four dedicated classes"}
         context={""}
         paragraph={""}
       />
-      <div className=" flex h-[400px] w-[80%]  flex-row flex-wrap items-center justify-center gap-[33px] text-center ">
+      <div className=" flex h-[400px] h-auto w-[80%]  flex-row flex-wrap items-center justify-center gap-[33px] text-center ">
         {aboutUsData &&
           aboutUsData.map((data, index) => {
             try {

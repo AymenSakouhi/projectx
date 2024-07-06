@@ -5,14 +5,7 @@ import Logo from "public/logo_header.png";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { navData, navDataSchema } from "../shared/data/navbarData";
-import {
-  faBars,
-  faBlog,
-  faContactCard,
-  faCut,
-  faHome,
-  faPager,
-} from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Navbar() {
   const [closeNav, setCloseNav] = useState<number>(40);
@@ -35,7 +28,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`${isFixed ? "fixed" : ""} ${isFixed && "scrollingNavFixed"} ${isFixed && "laptop:h-[90px]"} flex w-[100%] items-center justify-center  overflow-hidden bg-[#ffffff] text-center phone:h-auto phone:flex-col laptop:h-[126px] laptop:flex-row `}
+      className={`${isFixed ? "fixed" : ""} ${isFixed && "scrollingNavFixed"} ${isFixed && "laptop:h-[70px]"} ${isFixed && " shadow-lg"} flex w-[100%] items-center justify-center  overflow-hidden bg-[#ffffff] text-center phone:h-auto phone:flex-col laptop:h-[126px] laptop:flex-row `}
     >
       <div className="flex h-[100%] flex-col items-center justify-center text-center phone:w-[100%] laptop:w-[50%]">
         <Link href="/">

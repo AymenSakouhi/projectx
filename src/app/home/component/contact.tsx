@@ -29,7 +29,7 @@ export default function Contact() {
         context={""}
         paragraph={""}
       />
-      <div className="mb-[50px]  flex flex-row flex-wrap items-center justify-center gap-[33px] text-center ">
+      <div className="mb-[50px] flex flex-row flex-wrap items-center justify-center gap-[33px] text-center ">
         {contactUsData.map((data, index) => {
           try {
             contactUsDataSchema.parse(data);
@@ -69,19 +69,19 @@ export default function Contact() {
       <div className="flex h-auto w-[80%] flex-wrap items-center  justify-center gap-[33px] text-center phone:flex-col laptop:flex-row">
         <div className="flex h-[200px] flex-col items-start justify-start gap-[30px] text-start phone:w-[100%] laptop:w-[30%]">
           <input
-            className="w-[100%] rounded-[2px] border-2 border-b-2 border-l-0 border-r-0  border-t-0 border-slate-200  p-[10px] pl-[15px] outline-none  transition-all duration-500 focus:border-[#fe6500]  focus:placeholder:text-slate-300 "
+            className="w-[100%] rounded-[2px] border-2 border-b-2 border-l-0 border-r-0 border-t-0  border-slate-200 p-[10px]  pl-[15px] font-openSans text-[16px] font-normal leading-[24px] text-[#707070] outline-none transition-all duration-500 focus:border-[#fe6500]  focus:placeholder:text-slate-300 "
             type="text"
             id="text"
             placeholder="Your Name*"
           />
           <input
-            className="w-[100%] rounded-[2px] border-2 border-b-2 border-l-0 border-r-0  border-t-0 border-slate-200  p-[10px] pl-[15px] outline-none  transition-all duration-500 focus:border-[#fe6500]  focus:placeholder:text-slate-300 "
+            className="w-[100%] rounded-[2px] border-2 border-b-2 border-l-0 border-r-0 border-t-0  border-slate-200 p-[10px]  pl-[15px] font-openSans text-[16px] font-normal leading-[24px] text-[#707070] outline-none  transition-all duration-500 focus:border-[#fe6500]  focus:placeholder:text-slate-300 "
             type="email"
             id="email"
             placeholder="Your E-mail*"
           />
           <input
-            className="w-[100%] rounded-[2px] border-2 border-b-2 border-l-0 border-r-0  border-t-0 border-slate-200  p-[10px] pl-[15px] outline-none  transition-all duration-500 focus:border-[#fe6500]  focus:placeholder:text-slate-300 "
+            className=" w-[100%] rounded-[2px] border-2 border-b-2 border-l-0 border-r-0 border-t-0  border-slate-200 p-[10px]  pl-[15px] font-openSans text-[16px] font-normal leading-[24px] text-[#707070] outline-none  transition-all duration-500 focus:border-[#fe6500]  focus:placeholder:text-slate-300 "
             id="subject"
             placeholder="Subject"
           />
@@ -89,7 +89,7 @@ export default function Contact() {
         <div className=" h-[200px] phone:w-[100%] laptop:w-[30%]">
           <textarea
             placeholder="Message*"
-            className="h-[100%] w-[100%] resize-none rounded-[2px] border-2 border-b-2  border-l-0 border-r-0  border-t-0 border-slate-200    p-[10px]  pl-[15px] outline-none transition-all  duration-500 focus:border-[#fe6500] focus:placeholder:text-slate-300"
+            className=" h-[100%] w-[100%] resize-none rounded-[2px] border-2 border-b-2 border-l-0 border-r-0  border-t-0 border-slate-200  p-[10px] pl-[15px] font-openSans text-[16px] font-normal leading-[24px] text-[#707070]   outline-none transition-all  duration-500 focus:border-[#fe6500] focus:placeholder:text-slate-300"
           ></textarea>
         </div>
         <div className="w-[100%]">
