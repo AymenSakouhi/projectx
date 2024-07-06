@@ -4,9 +4,9 @@ import quoteIcon from "public/quote-icon.png";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { staffData, staffDataSchema } from "@/shared/data/staffData";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import SelectedImage from "../../shared/components/selectedImage";
 import { useState } from "react";
+import PlusIconImages from "~/app/shared/components/plusIconImages";
 
 export default function OurStaff() {
   const [showImage, setShowImage] = useState(false);
@@ -63,14 +63,7 @@ export default function OurStaff() {
                       }}
                       className=" absolute  left-0 top-0 z-[10] flex h-[100%] w-[100%] cursor-pointer flex-col items-center justify-center text-center opacity-0 transition-all duration-500 hover:opacity-100 "
                     >
-                      <div className=" flex flex-col items-center justify-center rounded-[50%] bg-[#57509f4f] text-center phone:h-[90px] phone:w-[90px] laptop:h-[150px] laptop:w-[150px] ">
-                        <Image
-                          src={data.galleryIconPlus}
-                          className="h-[28px] w-[28px]"
-                          alt=""
-                          objectFit="cover"
-                        />
-                      </div>
+                      <PlusIconImages />
                     </div>
 
                     <img className="h-[100%]" src={data.image} alt="" />

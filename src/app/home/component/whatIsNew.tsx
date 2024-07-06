@@ -6,6 +6,7 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SelectedImage from "~/app/shared/components/selectedImage";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
+import PlusIconImages from "~/app/shared/components/plusIconImages";
 export default function WhatIsNew() {
   const [showImage, setShowImage] = useState(false);
   const [imageData, setImageData] = useState({});
@@ -38,14 +39,7 @@ export default function WhatIsNew() {
                     }}
                     className=" absolute left-0 top-0 z-[10] flex h-[100%] w-[100%] cursor-pointer flex-col items-center justify-center text-center opacity-0 transition-all duration-500 hover:opacity-100 "
                   >
-                    <div className=" flex flex-col items-center justify-center rounded-[50%] bg-[#57509f4f] text-center phone:h-[90px] phone:w-[90px] laptop:h-[150px] laptop:w-[150px] ">
-                      <Image
-                        src={data.icon}
-                        className="h-[28px] w-[28px]"
-                        alt=""
-                        objectFit="cover"
-                      />
-                    </div>
+                    <PlusIconImages />
                   </div>
                   <img src={`${data.image}`} />
                   <h2 className="absolute bottom-0 right-0 flex h-[40px] w-[44px] flex-col items-center justify-center bg-[#FE6500] text-center font-openSans text-[20px] font-normal leading-[30px] text-[#fff]">

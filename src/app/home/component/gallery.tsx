@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import SelectedImage from "../../shared/components/selectedImage";
 import CallToAction from "~/app/shared/components/callToAction";
+import PlusIconImages from "~/app/shared/components/plusIconImages";
 
 export default function Gallery() {
   const [showImage, setShowImage] = useState(false);
@@ -30,12 +31,7 @@ export default function Gallery() {
                   className="hover absolute left-0 top-0 z-[10] flex h-[100%] w-[100%] flex-col items-center justify-center text-center opacity-0 transition-all duration-500 hover:opacity-100 "
                 >
                   <div className="flex flex-col  items-center justify-center rounded-[50%] bg-[#57509f4f] text-center phone:h-[90px] phone:w-[90px] laptop:h-[150px] laptop:w-[150px] ">
-                    <Image
-                      src={data.galleryIconPlus}
-                      className="h-[28px] w-[28px]"
-                      alt=""
-                      objectFit="cover"
-                    />
+                    <PlusIconImages />
                   </div>
                 </div>
                 <img

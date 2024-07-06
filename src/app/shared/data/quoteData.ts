@@ -57,5 +57,3 @@ export const quoteComponentData = [
     image: "/quote-text-icon.png",
   },
 ];
-
-// /quote-text-icon.png

@@ -11,7 +11,7 @@ export default function AboutUs() {
         context={""}
         paragraph={""}
       />
-      <div className=" flex h-[400px] h-auto w-[80%]  flex-row flex-wrap items-center justify-center gap-[33px] text-center ">
+      <div className=" flex  h-auto w-[80%]  flex-row flex-wrap items-center justify-center gap-[33px] text-center ">
         {aboutUsData &&
           aboutUsData.map((data, index) => {
             try {
