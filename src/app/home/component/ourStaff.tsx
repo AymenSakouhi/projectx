@@ -13,11 +13,10 @@ export default function OurStaff() {
   const [imageData, setImageData] = useState({});
 
   const createButton = (data: any) => {
-    console.log(data[0]);
-    let button = [];
+    let buttonGroup = [];
 
     for (let i = 0; i < data.length; i++) {
-      button.push(
+      buttonGroup.push(
         <button className=" flex h-[40px] w-[40px] flex-col items-center justify-center bg-orange-500 text-center hover:bg-[#665bdb]">
           <FontAwesomeIcon
             style={{
@@ -25,12 +24,12 @@ export default function OurStaff() {
               width: "23px",
               color: "white",
             }}
-            icon={data[i][0]}
+            icon={data[i].icon}
           />
         </button>,
       );
     }
-    return button;
+    return buttonGroup;
   };
 
   return (
@@ -96,36 +95,6 @@ export default function OurStaff() {
                   </p>
                   <div className="ml-[15px] mt-[25px] flex flex-row items-center  gap-1 text-center">
                     {createButton(data.socialMedia)}
-                    {/* <button className=" flex h-[40px] w-[40px] flex-col items-center justify-center bg-orange-500 text-center hover:bg-[#665bdb]">
-                      <FontAwesomeIcon
-                        style={{
-                          height: "23px",
-                          width: "23px",
-                          color: "white",
-                        }}
-                        icon={faFacebook}
-                      />
-                    </button>
-                    <button className="flex h-[40px] w-[40px] flex-col items-center justify-center bg-orange-500 text-center hover:bg-[#665bdb]">
-                      <FontAwesomeIcon
-                        style={{
-                          height: "23px",
-                          width: "23px",
-                          color: "white",
-                        }}
-                        icon={faFacebook}
-                      />
-                    </button>
-                    <button className="flex h-[40px] w-[40px] flex-col items-center justify-center bg-orange-500 text-center hover:bg-[#665bdb]">
-                      <FontAwesomeIcon
-                        style={{
-                          height: "23px",
-                          width: "23px",
-                          color: "white",
-                        }}
-                        icon={faFacebook}
-                      />
-                    </button> */}
                   </div>
                 </div>
               </div>
