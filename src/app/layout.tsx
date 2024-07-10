@@ -1,8 +1,13 @@
 import "~/styles/globals.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
 
 import { GeistSans } from "geist/font/sans";
 
 import { TRPCReactProvider } from "~/trpc/react";
+import Navbar from "./navbar/navbar";
+import ScrollToTopBtn from "./shared/components/scrollToTopBtn";
 
 export const metadata = {
   title: "Create T3 App",
@@ -18,6 +23,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
+        <Navbar />
+        <ScrollToTopBtn />
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
