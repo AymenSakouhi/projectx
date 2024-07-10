@@ -1,3 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.scrollingNavFixed {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  transition: all;
+  transition-duration: 500;
+  transition-timing-function: ease-in-out;
+  animation-name: scrollingNav;
+  animation-duration: 500ms;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: inherit;
+}
+
+@keyframes scrollingNav {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+/* over view elements */
+.overViewBtn {
+  transition: all 0.3s ease;
+  border-bottom: rgba(212, 212, 212, 0.589) solid 2px;
+}
+.overViewBtn:hover {
+  background-color: #fe6501;
+  color: white;
+  border-bottom: none;
+}
+.overViewBtn::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fe6501;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+
+.overViewBtn:hover::after {
+  opacity: 1;
+}
+
+.selectedOverView {
+  background-color: #fe6501;
+  color: white;
+  border-bottom: none;
+}
+
+.selectedOverView::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  opacity: 1;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #fe6501;
+}
